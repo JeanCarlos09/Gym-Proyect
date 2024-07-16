@@ -131,8 +131,22 @@ export default {
     },
     handleSubmit() {
       if (this.validateForm()) { // Valida el formulario antes de enviar
-        alert('Registro exitoso'); // Muestra un mensaje de éxito
-        this.$router.push('/inicio'); // Redirige al usuario a la página de inicio
+        const users = JSON.parse(localStorage.getItem('users')) || []; // Obtener usuarios almacenados
+        const userExists = users.some(user => user.email === this.formData.email); // Verificar si el usuario ya existe
+
+        if (userExists) {
+          this.errors.email = 'El correo electrónico ya está registrado.';
+        } else {
+          users.push({
+            name: this.formData.name,
+            surname: this.formData.surname,
+            email: this.formData.email,
+            password: this.formData.password
+          });
+          localStorage.setItem('users', JSON.stringify(users)); // Guardar el nuevo usuario en localStorage
+          alert('Registro exitoso'); // Muestra un mensaje de éxito
+          this.$router.push('/inicio'); // Redirige al usuario a la página de inicio
+        }
       }
     }
   }
