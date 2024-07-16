@@ -17,23 +17,33 @@ import RegistroIndex from '../components/RegistroIndex.vue';
 
 const routes = [
   { path: '/', component: Bienvenida }, // Ruta por defecto a la página de bienvenida
-  { path: '/principal', component: PrincipalIndex },
-  { path: '/blog', component: BlogPage },
-  { path: '/calendario', component: CalendarPage },
-  { path: '/claseslist', component: Clases },
-  { path: '/membresia', component: MembresiaPage },
-  { path: '/galeria', component: GaleriaGimnasio },
-  { path: '/perfil', component: PerfilIndex },
+  { path: '/principal', component: PrincipalIndex, meta: { requiresAuth: true } },
+  { path: '/blog', component: BlogPage, meta: { requiresAuth: true } },
+  { path: '/calendario', component: CalendarPage, meta: { requiresAuth: true } },
+  { path: '/claseslist', component: Clases, meta: { requiresAuth: true } },
+  { path: '/membresia', component: MembresiaPage, meta: { requiresAuth: true } },
+  { path: '/galeria', component: GaleriaGimnasio, meta: { requiresAuth: true } },
+  { path: '/perfil', component: PerfilIndex, meta: { requiresAuth: true } },
   { path: '/inicio', component: UserLogin },
-  { path: '/mantenimiento', component: MaintenancePage },
-  { path: '/pagos', component: PagosIndex },
-  { path: '/progreso', component: ProgresoIndex },
+  { path: '/mantenimiento', component: MaintenancePage, meta: { requiresAuth: true } },
+  { path: '/pagos', component: PagosIndex, meta: { requiresAuth: true } },
+  { path: '/progreso', component: ProgresoIndex, meta: { requiresAuth: true } },
   { path: '/registro', component: RegistroIndex },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const loggedInUser = localStorage.getItem('loggedInUser');
+  if (to.matched.some(record => record.meta.requiresAuth) && !loggedInUser) {
+    // Si la ruta requiere autenticación y el usuario no ha iniciado sesión
+    next('/inicio'); // Redirigir a la página de inicio de sesión
+  } else {
+    next(); // Dejar que el usuario continúe
+  }
 });
 
 export default router;
