@@ -1,0 +1,308 @@
+/* Estilos generales del cuerpo del documento */
+#body-manteni {
+    font-family: Arial, sans-serif;
+    /* Fuente por defecto */
+    margin: 0;
+    /* Elimina el margen por defecto */
+    padding: 0;
+    /* Elimina el padding por defecto */
+    background: url('../imagenes/mantenimiento-img/mantenimiento-fondo.jpg') no-repeat center center fixed;
+    /* Imagen de fondo fija */
+    background-size: cover;
+    /* La imagen cubre toda el área */
+    color: white;
+    /* Color del texto en blanco */
+    display: flex;
+    /* Utiliza flexbox para el layout */
+    flex-direction: column;
+    /* Los elementos se disponen en columna */
+    min-height: 100vh;
+    /* Altura mínima del viewport */
+}
+
+/* Estilos para el encabezado */
+#header-manteni {
+    background-color: #252424;
+    /* Color de fondo del encabezado */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    padding-bottom: 0;
+    /* Sin padding inferior */
+    padding: 10px;
+    /* Padding general de 10px */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos para el logo en el encabezado */
+#header-manteni .logo img {
+    height: 90px;
+    /* Altura ajustada para el logo */
+}
+
+/* Estilos para los íconos de redes sociales */
+#header-manteni .social-media {
+    display: flex;
+    /* Utiliza flexbox para alinear los íconos */
+    align-items: center;
+    /* Alinea los íconos verticalmente al centro */
+}
+
+#header-manteni .social-media a img {
+    height: 30px;
+    /* Altura ajustada para los íconos de redes sociales */
+    margin: 0 20px;
+    /* Espacio horizontal entre los íconos */
+}
+
+/* Estilos para el menú de navegación */
+#header-manteni nav {
+    display: flex;
+    /* Utiliza flexbox para alinear los enlaces */
+    align-items: center;
+    /* Alinea los enlaces verticalmente al centro */
+}
+
+#header-manteni nav a {
+    margin: 0 25px;
+    /* Espacio horizontal entre los enlaces */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    color: white;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para el ícono de la barra lateral */
+#header-manteni .sidebar-icon {
+    cursor: pointer;
+    /* Cursor tipo puntero al pasar sobre el ícono */
+    color: white;
+    /* Color del ícono en blanco */
+    margin-left: 10px;
+    /* Espacio izquierdo del ícono */
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    display: none;
+    /* Oculta la barra lateral por defecto */
+    background-color: #dad9d9;
+    /* Color de fondo de la barra lateral */
+    position: fixed;
+    /* Posición fija en la pantalla */
+    top: 0;
+    /* Posicionamiento desde el top */
+    right: 0;
+    /* Posicionamiento desde el right */
+    height: 50vh;
+    /* Altura de la barra lateral */
+    width: 250px;
+    /* Ancho de la barra lateral */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /* Sombra en el borde izquierdo */
+    padding: 20px;
+    /* Padding interno de 20px */
+    overflow-y: auto;
+    /* Scroll vertical si el contenido excede la altura */
+    z-index: 1000;
+    /* Asegura que la barra lateral esté por encima de otros elementos */
+}
+
+/* Estilos para el botón de cierre de la barra lateral */
+.sidebar .close-btn {
+    font-size: 30px;
+    /* Tamaño del texto del botón */
+    cursor: pointer;
+    /* Cursor tipo puntero al pasar sobre el botón */
+    color: black;
+    /* Color del texto del botón */
+    text-align: right;
+    /* Alineación del texto a la derecha */
+}
+
+/* Estilos para la información del usuario en la barra lateral */
+.sidebar .user-info {
+    margin-bottom: 20px;
+    /* Margen inferior adicional */
+}
+
+.sidebar .user-info p {
+    color: #000000;
+    /* Color del texto en negro */
+    margin: 5px 0;
+    /* Margen vertical de 5px */
+    font-size: 1.2em;
+    /* Tamaño de fuente ajustado */
+}
+
+/* Estilos para los separadores en la barra lateral */
+.sidebar hr {
+    border: 0;
+    /* Sin borde en el separador */
+    height: 1px;
+    /* Altura del separador */
+    background-color: #000000;
+    /* Color de fondo del separador */
+    margin: 10px 0;
+    /* Espacio vertical alrededor del separador */
+}
+
+/* Estilos para los enlaces en la barra lateral */
+.sidebar a {
+    display: block;
+    /* Muestra los enlaces como bloques */
+    margin: 20px 0;
+    /* Espacio vertical entre los enlaces */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    color: black;
+    /* Color del texto en negro */
+    font-size: 1.2em;
+    /* Tamaño de fuente ajustado */
+}
+
+/* Estilos para el contenedor principal del contenido */
+#main-manteni {
+    padding: 5px;
+    /* Padding interno de 5px */
+}
+
+/* Estilos para el bloque de soporte y mantenimiento */
+.support-maintenance h1 {
+    margin-bottom: 20px;
+    /* Margen inferior de 20px */
+}
+
+.support-maintenance p {
+    margin-bottom: 40px;
+    /* Margen inferior de 40px */
+}
+
+/* Estilos para el bloque de bienvenida */
+.Bienvenido {
+    text-align: center;
+    /* Alineación del texto al centro */
+    padding: 20px;
+    /* Padding interno de 20px */
+    background-color: rgba(0, 0, 0, 0.96);
+    /* Fondo oscuro semi-transparente */
+}
+
+/* Estilos para el texto en el bloque de bienvenida */
+.Bienvenido,
+p {
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+}
+
+/* Estilos para el bloque de problemas */
+.problemas {
+    padding: 5px;
+    /* Padding interno de 5px */
+    background-color: rgba(0, 0, 0, 0.96);
+    /* Fondo oscuro semi-transparente */
+}
+
+/* Estilos para el área de texto en el bloque de problemas */
+.problemas textarea {
+    border: #000000;
+    /* Color del borde en negro */
+    border-style: double;
+    /* Estilo de borde doble */
+    border-radius: 10px;
+    /* Bordes redondeados de 10px */
+    resize: none;
+    /* Sin opción para redimensionar */
+    font-family: 'Times New Roman', Times, serif;
+    /* Fuente Times New Roman */
+    font-size: large;
+    /* Tamaño de fuente grande */
+}
+
+/* Estilos para el botón en el bloque de problemas */
+.problemas button {
+    background-color: #4caf50;
+    /* Color de fondo verde para el botón */
+    color: white;
+    /* Color del texto en blanco */
+    padding: 10px 20px;
+    /* Padding interno del botón */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+    cursor: pointer;
+    /* Cursor tipo puntero al pasar sobre el botón */
+    transition: background-color 0.3s;
+    /* Transición suave para el cambio de color de fondo */
+}
+
+/* Estilos para el botón en el bloque de problemas al pasar el ratón */
+.problemas button:hover {
+    background-color: #45a049;
+    /* Cambio de color de fondo al pasar el ratón */
+}
+
+/* Estilos para el bloque de preguntas frecuentes */
+.faq {
+    padding: 20px;
+    /* Padding interno de 20px */
+    background-color: rgba(0, 0, 0, 0.96);
+    /* Fondo oscuro semi-transparente */
+}
+
+/* Estilos para el contenedor de una sección de preguntas frecuentes */
+.aa1 {
+    display: flex;
+    /* Utiliza flexbox para el layout */
+    flex-direction: column;
+    /* Los elementos se disponen en columna */
+    padding: 10px;
+    /* Padding interno de 10px */
+    background-color: rgba(112, 108, 108, 0.96);
+    /* Fondo gris oscuro semi-transparente */
+    border-radius: 30px;
+    /* Bordes redondeados de 30px */
+}
+
+/* Estilos para el pie de página */
+#footer-manteni {
+    background-color: #252424;
+    /* Color de fondo del pie de página */
+    color: white;
+    /* Color del texto en blanco */
+    padding: 10px;
+    /* Padding interno de 10px */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos para los enlaces en el pie de página */
+#footer-manteni nav.footer-nav a {
+    color: white;
+    /* Color del texto en blanco */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    margin: 0 10px;
+    /* Espacio horizontal entre los enlaces */
+}
+
+/* Estilos para los párrafos en la sección de contacto del pie de página */
+#footer-manteni .contacto-manteni .p-manteni {
+    margin: 5px 0;
+    /* Margen vertical de 5px */
+    font-size: 17px;
+    /* Tamaño de fuente de 17px */
+    text-align: center;
+    /* Alineación del texto al centro */
+}

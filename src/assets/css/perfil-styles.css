@@ -1,0 +1,399 @@
+/* Estilos generales del cuerpo del documento */
+#body-perfil {
+    font-family: Arial, sans-serif;
+    /* Fuente por defecto */
+    margin: 0;
+    /* Elimina el margen por defecto */
+    padding: 0;
+    /* Elimina el padding por defecto */
+    background: url('../imagenes/perfil-img/fondo.png') no-repeat center center fixed;
+    /* Imagen de fondo fija */
+    background-size: cover;
+    /* La imagen cubre toda el área */
+    color: white;
+    /* Color del texto en blanco */
+    display: flex;
+    /* Utiliza flexbox para el layout */
+    flex-direction: column;
+    /* Los elementos se disponen en columna */
+    min-height: 100vh;
+    /* Altura mínima del viewport */
+}
+
+/* Estilos para el encabezado */
+#header-perfil {
+    background-color: #252424;
+    /* Color de fondo del encabezado */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    padding: 10px;
+    /* Padding general de 10px */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos para el logo en el encabezado */
+#header-perfil .logo img {
+    height: 90px;
+    /* Tamaño del logo ajustado */
+}
+
+/* Estilos para los íconos de redes sociales */
+#header-perfil .social-media {
+    display: flex;
+    /* Utiliza flexbox para alinear los íconos */
+    align-items: center;
+    /* Alinea los íconos verticalmente al centro */
+}
+
+#header-perfil .social-media a img {
+    height: 30px;
+    /* Tamaño ajustado para redes sociales */
+    margin: 0 20px;
+    /* Más separación entre los íconos */
+}
+
+/* Estilos para el menú de navegación */
+#header-perfil nav {
+    display: flex;
+    /* Utiliza flexbox para alinear los enlaces */
+    align-items: center;
+    /* Alinea los enlaces verticalmente al centro */
+}
+
+#header-perfil nav a {
+    margin: 0 25px;
+    /* Espacio horizontal entre los enlaces */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    color: white;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para el ícono de la barra lateral */
+#header-perfil .sidebar-icon {
+    cursor: pointer;
+    /* Cursor tipo puntero al pasar sobre el ícono */
+    color: white;
+    /* Color del ícono en blanco */
+    margin-left: 10px;
+    /* Espacio izquierdo del ícono */
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    display: none;
+    /* Oculta la barra lateral por defecto */
+    background-color: #dad9d9;
+    /* Color de fondo de la barra lateral */
+    position: fixed;
+    /* Posición fija en la pantalla */
+    top: 0;
+    /* Posicionamiento desde el top */
+    right: 0;
+    /* Posicionamiento desde el right */
+    height: 40vh;
+    /* Altura reducida de la barra lateral */
+    width: 250px;
+    /* Ancho de la barra lateral */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /* Sombra en el borde izquierdo */
+    padding: 20px;
+    /* Padding interno de 20px */
+    overflow-y: auto;
+    /* Scroll vertical si el contenido excede la altura */
+    z-index: 1000;
+    /* Asegura que la barra lateral esté por encima de otros elementos */
+}
+
+/* Estilos para el botón de cierre de la barra lateral */
+.sidebar .close-btn {
+    font-size: 30px;
+    /* Tamaño del texto del botón */
+    cursor: pointer;
+    /* Cursor tipo puntero al pasar sobre el botón */
+    color: black;
+    /* Color del texto del botón */
+    text-align: right;
+    /* Alineación del texto a la derecha */
+}
+
+/* Estilos para la información del usuario en la barra lateral */
+.sidebar .user-info {
+    margin-bottom: 20px;
+    /* Espacio adicional debajo de la información del usuario */
+}
+
+.sidebar .user-info p {
+    color: #000000;
+    /* Color del texto en negro */
+    margin: 5px 0;
+    /* Margen vertical de 5px */
+    font-size: 1.2em;
+    /* Tamaño de fuente ajustado */
+}
+
+/* Estilos para los separadores en la barra lateral */
+.sidebar hr {
+    border: 0;
+    /* Sin borde en el separador */
+    height: 1px;
+    /* Altura del separador */
+    background-color: #000000;
+    /* Color de fondo del separador */
+    margin: 10px 0;
+    /* Espacio entre los separadores y los enlaces */
+}
+
+/* Estilos para los enlaces en la barra lateral */
+.sidebar a {
+    display: block;
+    /* Muestra los enlaces como bloques */
+    margin: 20px 0;
+    /* Más espacio entre los enlaces del sidebar */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    color: black;
+    /* Color del texto en negro */
+    font-size: 1.2em;
+    /* Tamaño de letra ajustado para los botones de acceso rápido */
+}
+
+/* Estilos para el contenedor principal del contenido */
+#main-perfil {
+    padding-bottom: 50px;
+    /* Padding inferior de 50px para evitar que el contenido quede oculto detrás del pie de página */
+    padding-left: 0;
+    /* Sin padding izquierdo */
+    padding-right: 0;
+    /* Sin padding derecho */
+}
+
+/* Estilos para la barra lateral izquierda */
+.sidebar1-perfil {
+    width: 250px;
+    /* Ancho de la barra lateral */
+    background-color: rgba(0, 0, 0, 0.59);
+    /* Fondo negro semi-transparente */
+    color: white;
+    /* Color del texto en blanco */
+    display: flex;
+    /* Utiliza flexbox para el layout */
+    flex-direction: column;
+    /* Los elementos se disponen en columna */
+    align-items: center;
+    /* Alinea los elementos horizontalmente al centro */
+    padding: 20px;
+    /* Padding interno de 20px */
+}
+
+/* Estilos para la sección de la imagen de perfil */
+.profile-pic-perfil {
+    text-align: center;
+    /* Alineación del texto al centro */
+}
+
+.profile-pic-perfil img {
+    width: 100px;
+    /* Ancho de la imagen de perfil */
+    height: 100px;
+    /* Altura de la imagen de perfil */
+    border-radius: 50%;
+    /* Bordes redondeados para hacer la imagen circular */
+    margin-bottom: 10px;
+    /* Espacio inferior de 10px */
+}
+
+/* Estilos para el botón de cambio de perfil */
+.profile-pic-perfil button {
+    background-color: #3498db;
+    /* Color de fondo azul para el botón */
+    color: white;
+    /* Color del texto en blanco */
+    border: none;
+    /* Sin borde */
+    padding: 10px;
+    /* Padding interno de 10px */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+    cursor: pointer;
+    /* Cursor tipo puntero */
+}
+
+/* Estilos para el botón de cambio de perfil al pasar el ratón */
+.profile-pic-perfil button:hover {
+    background-color: #2980b9;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el menú lateral en la barra lateral izquierda */
+.menu-perifl {
+    list-style: none;
+    /* Sin viñetas */
+    padding: 0;
+    /* Sin padding */
+    width: 100%;
+    /* Ancho completo */
+}
+
+.menu-perifl li {
+    padding: 15px;
+    /* Padding interior de 15px */
+    text-align: center;
+    /* Alineación del texto al centro */
+    cursor: pointer;
+    /* Cursor tipo puntero */
+    background-color: #34495e;
+    /* Fondo gris oscuro */
+    margin-top: 10px;
+    /* Espacio superior de 10px */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+}
+
+/* Estilos para el menú lateral al pasar el ratón */
+.menu-perifl li:hover {
+    background-color: #3c5a72;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el contenedor de contenido */
+.content-perfil {
+    flex-grow: 1;
+    /* Ocupa el espacio restante en el contenedor */
+    padding: 20px;
+    /* Padding interno de 20px */
+    background-color: rgba(0, 0, 0, 0.93);
+    /* Fondo negro semi-transparente */
+}
+
+/* Estilos para las secciones activas */
+.section-perfil.active {
+    display: block;
+    /* Muestra la sección activa */
+}
+
+/* Estilos para los encabezados */
+h2 {
+    color: #ffffff;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para los grupos de formularios */
+.form-group-perfil {
+    margin-bottom: 15px;
+    /* Margen inferior de 15px */
+}
+
+/* Estilos para las etiquetas dentro de los formularios */
+.form-group-perfil label {
+    display: block;
+    /* Muestra las etiquetas como bloques */
+    margin-bottom: 5px;
+    /* Margen inferior de 5px */
+    color: #ffffff;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para los campos de entrada en formularios */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    /* Ancho completo del campo de entrada */
+    padding: 8px;
+    /* Padding interno de 8px */
+    box-sizing: border-box;
+    /* Incluye padding y borde en el ancho total */
+    border: 1px solid #ccc;
+    /* Borde gris claro */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+}
+
+/* Estilos para los mensajes de error */
+.error-message {
+    color: red;
+    /* Color del texto en rojo */
+    font-size: 12px;
+    /* Tamaño de fuente de 12px */
+    display: none;
+    /* Oculta el mensaje por defecto */
+}
+
+/* Estilos para el botón de perfil */
+#boton-perfil {
+    width: 100%;
+    /* Ancho completo del botón */
+    padding: 10px;
+    /* Padding interno de 10px */
+    background-color: #5cb85c;
+    /* Color de fondo verde para el botón */
+    color: white;
+    /* Color del texto en blanco */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+    cursor: pointer;
+    /* Cursor tipo puntero */
+}
+
+/* Estilos para el botón de perfil al pasar el ratón */
+#boton-perfil:hover {
+    background-color: #4cae4c;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para las columnas flotantes */
+.left-side {
+    width: 22%;
+    /* Ancho de la columna izquierda */
+    float: left;
+    /* Flota a la izquierda */
+}
+
+.right-side {
+    width: 60%;
+    /* Ancho de la columna derecha */
+    float: left;
+    /* Flota a la izquierda */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #252424;
+    /* Color de fondo del pie de página */
+    color: white;
+    /* Color del texto en blanco */
+    padding: 10px;
+    /* Padding general de 10px */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos para los enlaces en el pie de página */
+footer nav.footer-nav a {
+    color: white;
+    /* Color del texto en blanco */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    margin: 0 10px;
+    /* Espacio horizontal entre los enlaces */
+}
+
+/* Estilos para la sección de contacto en el pie de página */
+footer .contacto p {
+    margin: 5px 0;
+    /* Margen vertical de 5px */
+}

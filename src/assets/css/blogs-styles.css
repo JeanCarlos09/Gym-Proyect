@@ -1,0 +1,299 @@
+/* Estilos para el contenedor principal del blog */
+#body-blog {
+    font-family: Arial, sans-serif;
+    /* Establece la fuente para todo el contenido del blog */
+    margin: 0;
+    /* Elimina el margen predeterminado */
+    padding: 0;
+    /* Elimina el relleno predeterminado */
+    background: url('../imagenes/blogs-img/blog-img.jpg') no-repeat center center fixed;
+    /* Establece una imagen de fondo que no se repite y está fija al hacer scroll */
+    background-size: cover;
+    /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    color: white;
+    /* Establece el color del texto a blanco */
+    display: flex;
+    /* Utiliza flexbox para la disposición del contenido */
+    flex-direction: column;
+    /* Dispone los elementos en una columna */
+    min-height: 100vh;
+    /* Establece una altura mínima del 100% de la ventana de visualización */
+}
+
+/* Estilos para el contenedor del header del blog */
+#header-blog {
+    background-color: #252424;
+    /* Color de fondo oscuro */
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos dentro del header */
+    justify-content: space-between;
+    /* Espacia los elementos al máximo */
+    align-items: center;
+    /* Alinea los elementos verticalmente en el centro */
+    padding: 10px;
+    /* Añade un espacio interno de 10px alrededor del contenedor */
+    flex-wrap: wrap;
+    /* Permite que los elementos hijos se envuelvan en varias líneas si es necesario */
+}
+
+/* Estilos para la imagen del logo dentro del header */
+#header-blog .logo img {
+    height: 90px;
+    /* Ajusta la altura del logo a 90px */
+    /* Tamaño del logo ajustado */
+}
+
+/* Estilos para el contenedor de redes sociales dentro del header */
+#header-blog .social-media {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los íconos sociales */
+    align-items: center;
+    /* Alinea los íconos sociales verticalmente en el centro */
+}
+
+/* Estilos para los íconos de redes sociales dentro del contenedor */
+#header-blog .social-media a img {
+    height: 30px;
+    /* Ajusta la altura de los íconos sociales a 30px */
+    /* Tamaño ajustado para redes sociales */
+    margin: 0 20px;
+    /* Añade un margen horizontal de 20px entre los íconos */
+    /* Más separación entre los íconos */
+}
+
+/* Estilos para el contenedor de navegación dentro del header */
+#header-blog nav {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los enlaces de navegación */
+    align-items: center;
+    /* Alinea los enlaces de navegación verticalmente en el centro */
+}
+
+/* Estilos para los enlaces dentro del contenedor de navegación */
+#header-blog nav a {
+    margin: 0 25px;
+    /* Añade un margen horizontal de 25px entre los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: white;
+    /* Establece el color del texto de los enlaces a blanco */
+}
+
+/* Estilos para el icono de la barra lateral dentro del header */
+#header-blog .sidebar-icon {
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el icono */
+    color: white;
+    /* Establece el color del icono a blanco */
+    margin-left: 10px;
+    /* Añade un margen a la izquierda del icono */
+}
+
+/* Estilos para el contenedor de la barra lateral */
+.sidebar {
+    display: none;
+    /* Oculta la barra lateral por defecto */
+    background-color: #dad9d9;
+    /* Color de fondo claro para la barra lateral */
+    position: fixed;
+    /* Fija la barra lateral en una posición específica */
+    top: 0;
+    /* Posiciona la barra lateral en la parte superior */
+    right: 0;
+    /* Posiciona la barra lateral en el lado derecho */
+    height: 40vh;
+    /* Altura de la barra lateral establecida en el 40% de la ventana de visualización */
+    width: 250px;
+    /* Establece un ancho fijo para la barra lateral */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /* Añade una sombra al contenedor de la barra lateral */
+    padding: 20px;
+    /* Añade un espacio interno de 20px alrededor del contenido */
+    overflow-y: auto;
+    /* Permite el desplazamiento vertical si el contenido es más grande que la altura de la barra lateral */
+    z-index: 1000;
+    /* Asegura que la barra lateral esté por encima de otros elementos */
+}
+
+/* Estilos para el botón de cierre en la barra lateral */
+.sidebar .close-btn {
+    font-size: 30px;
+    /* Establece el tamaño de la fuente para el botón de cierre */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+    color: black;
+    /* Establece el color del botón de cierre a negro */
+    text-align: right;
+    /* Alinea el texto del botón de cierre a la derecha */
+}
+
+/* Estilos para la información del usuario dentro de la barra lateral */
+.sidebar .user-info {
+    margin-bottom: 20px;
+    /* Añade un margen inferior de 20px */
+    /* Espacio adicional debajo de la información del usuario */
+}
+
+/* Estilos para los párrafos dentro del contenedor de información del usuario */
+.sidebar .user-info p {
+    color: #000000;
+    /* Establece el color del texto a negro */
+    margin: 5px 0;
+    /* Añade un margen vertical de 5px */
+    font-size: 1.2em;
+    /* Ajusta el tamaño de la fuente */
+    /* Tamaño de fuente ajustado */
+}
+
+/* Estilos para los separadores dentro de la barra lateral */
+.sidebar hr {
+    border: 0;
+    /* Elimina el borde del separador */
+    height: 1px;
+    /* Establece una altura de 1px para el separador */
+    background-color: #000000;
+    /* Establece el color de fondo del separador a negro */
+    margin: 10px 0;
+    /* Añade un margen vertical de 10px alrededor del separador */
+    /* Espacio entre los separadores y los enlaces */
+}
+
+/* Estilos para los enlaces dentro de la barra lateral */
+.sidebar a {
+    display: block;
+    /* Hace que cada enlace ocupe una línea completa */
+    margin: 20px 0;
+    /* Añade un margen vertical de 20px entre los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: black;
+    /* Establece el color del texto de los enlaces a negro */
+    font-size: 1.2em;
+    /* Ajusta el tamaño de la fuente para los enlaces */
+    /* Tamaño de letra ajustado para los botones de acceso rápido */
+}
+
+/* Estilos para el contenedor principal del blog */
+#main-blog {
+    display: flex;
+    /* Utiliza flexbox para la disposición del contenido principal */
+    flex-direction: column;
+    /* Dispone los elementos en una columna */
+    padding: 20px;
+    /* Añade un espacio interno de 20px alrededor del contenido */
+}
+
+/* Estilos para el contenedor de las publicaciones del blog */
+.blog-container-blog {
+    display: grid;
+    /* Utiliza grid para la disposición de las publicaciones */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Crea columnas automáticas con un ancho mínimo de 300px */
+    gap: 30px;
+    /* Añade un espacio de 30px entre las publicaciones */
+}
+
+/* Estilos para cada publicación del blog */
+.blog-post-blog {
+    background-color: #000000;
+    /* Establece el color de fondo de las publicaciones a negro */
+    border-radius: 10px;
+    /* Redondea los bordes de las publicaciones */
+    overflow: hidden;
+    /* Oculta cualquier contenido que sobresalga del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Añade una sombra ligera alrededor de las publicaciones */
+}
+
+/* Estilos para las imágenes dentro de cada publicación del blog */
+.blog-post-blog img {
+    width: 100%;
+    /* Establece el ancho de la imagen al 100% del contenedor */
+    height: 200px;
+    /* Establece una altura fija para las imágenes */
+    object-fit: cover;
+    /* Ajusta la imagen para cubrir el contenedor sin deformarse */
+}
+
+/* Estilos para el contenido de cada publicación del blog */
+.blog-content-blog {
+    padding: 20px;
+    /* Añade un espacio interno de 20px alrededor del contenido */
+}
+
+/* Estilos para los encabezados dentro del contenido de la publicación del blog */
+.blog-content-blog h2 {
+    margin-top: 0;
+    /* Elimina el margen superior del encabezado */
+    font-size: 1.5em;
+    /* Ajusta el tamaño de la fuente para los encabezados */
+}
+
+/* Estilos para los párrafos dentro del contenido de la publicación del blog */
+.blog-content-blog p {
+    color: #ffffff;
+    /* Establece el color del texto a blanco */
+}
+
+/* Estilos para el enlace "Leer más" dentro de cada publicación del blog */
+.read-more-blog {
+    display: inline-block;
+    /* Hace que el enlace ocupe solo el espacio necesario */
+    padding: 5px 10px;
+    /* Añade un espacio interno de 5px en la parte superior e inferior, y 10px a los lados */
+    background-color: #4CAF50;
+    /* Establece el color de fondo del enlace a verde */
+    color: #fff;
+    /* Establece el color del texto a blanco */
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+    border-radius: 5px;
+    /* Redondea los bordes del enlace */
+    transition: background-color 0.3s;
+    /* Añade una transición suave para el color de fondo */
+}
+
+/* Estilos para el enlace "Leer más" al pasar el mouse sobre él */
+.read-more-blog:hover {
+    background-color: #45a049;
+    /* Cambia el color de fondo a un verde más oscuro al pasar el mouse */
+}
+
+/* Estilos para el contenedor del footer del blog */
+#footer-blog {
+    background-color: #252424;
+    /* Color de fondo oscuro */
+    color: white;
+    /* Establece el color del texto a blanco */
+    padding: 10px;
+    /* Añade un espacio interno de 10px alrededor del contenedor */
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos dentro del footer */
+    justify-content: space-between;
+    /* Espacia los elementos al máximo */
+    align-items: center;
+    /* Alinea los elementos verticalmente en el centro */
+    flex-wrap: wrap;
+    /* Permite que los elementos hijos se envuelvan en varias líneas si es necesario */
+}
+
+/* Estilos para los enlaces dentro del contenedor de navegación del footer */
+#footer-blog nav.footer-nav a {
+    color: white;
+    /* Establece el color del texto de los enlaces a blanco */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    margin: 0 10px;
+    /* Añade un margen horizontal de 10px entre los enlaces */
+}
+
+/* Estilos para el texto de contacto en el footer */
+#footer-blog .contacto-blog .p-blog {
+    margin: 5px 0;
+    /* Añade un margen vertical de 5px */
+    font-size: 17px;
+    /* Ajusta el tamaño de la fuente del texto */
+    /* Alineación del texto al centro */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+}

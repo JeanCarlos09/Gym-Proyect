@@ -1,0 +1,110 @@
+/* Estilos generales del cuerpo del documento */
+#body-register {
+  background-image: url("../imagenes/registro-img/3.jpg"); /* Fondo de imagen */
+  background-size: cover; /* Cubre todo el fondo */
+  background-repeat: no-repeat; /* No se repite */
+  background-position: center; /* Centrado */
+  /* La imagen cubre toda la pantalla */
+  color: rgb(0, 0, 0);
+  /* Color del texto en blanco */
+  display: flex;
+  /* Usa flexbox para el layout */
+  flex-direction: column;
+  /* Dirección de los elementos en columna */
+  min-height: 100vh;
+  /* Altura mínima del viewport */
+  font-family: Arial, sans-serif;
+  /* Fuente por defecto */
+  margin: 0;
+  /* Elimina el margen por defecto */
+  padding: 0;
+  /* Elimina el padding por defecto */
+}
+
+/* Estilos para el contenedor principal */
+.main-register {
+  width: 400px; /* Ancho máximo */
+  margin: 50px auto; /* Margen superior e inferior automático */
+  padding: 20px; /* Relleno */
+  border-radius: 20px; /* Bordes redondeados */
+  background-color: #fff; /* Color de fondo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para el icono en el encabezado */
+.icono-register {
+  position: absolute; /* Posición absoluta */
+  top: 74px; /* Distancia desde la parte superior */
+  right: 520px; /* Distancia desde la derecha */
+  width: 60px; /* Ancho del icono */
+  height: 20 px; /* Altura del icono */
+  object-fit: cover; /* Ajustar la imagen del icono para cubrir */
+}
+
+/* Estilos para el título principal */
+.h1-register {
+  font-family: 'Times New Roman', Times, serif; /* Fuente del título */
+  text-align: left ; /* Alineación del texto a la izquierda */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para los elementos del formulario */
+.form-group-register {
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+.form-group-register label{
+  display: block; /* Mostrar como bloque */
+  font-weight: bold; /* Negrita */
+  margin-bottom: 5px; /* Margen inferior */
+  color: black;
+}
+
+
+/* Estilos para los campos de entrada del formulario */
+.form-group-register input {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Relleno interior */
+  border: 1px solid #8d8c8c; /* Borde sólido */
+  border-radius: 4px; /* Radio de borde */
+  box-sizing: border-box; /* Tamaño de caja de borde */
+}
+
+/* Estilos para los mensajes de error */
+.error-message-register {
+  color: red; /* Color rojo */
+  font-size: 14px; /* Tamaño de fuente */
+  margin-top: 5px; /* Margen superior */
+}
+
+/* Estilos para el botón de envío */
+#boton-register {
+  display: block; /* Mostrar como bloque */
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Relleno interior */
+  background-color: #990000; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Radio de borde */
+  cursor: pointer; /* Cursor de puntero */
+}
+
+/* Estilos para el botón de envío al pasar el ratón */
+#boton-register:hover {
+  background-color: #ff0000; /* Cambiar color de fondo al pasar el ratón */
+}
+
+.signup-link-register {
+  text-align: center; /* Alineación centrada */
+  margin-top: 10px;
+}
+
+.signup-link-register a {
+  color: #007bff; /* Color del enlace */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.signup-link-register a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+

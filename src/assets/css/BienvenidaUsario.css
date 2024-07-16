@@ -1,0 +1,333 @@
+/* Estilos para el contenedor principal del header */
+#header-bienvenido {
+    background-color: #252424;
+    /* Color de fondo oscuro */
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos */
+    justify-content: space-between;
+    /* Espacia los elementos hijos al máximo */
+    align-items: center;
+    /* Alinea los elementos hijos verticalmente en el centro */
+    padding: 10px;
+    /* Añade un espacio interno de 10px alrededor del contenedor */
+    flex-wrap: wrap;
+    /* Permite que los elementos hijos se envuelvan en varias líneas si es necesario */
+}
+
+/* Estilos para la imagen del logo dentro del header */
+#header-bienvenido .logo img {
+    height: 90px;
+    /* Ajusta la altura del logo a 90px */
+    /* Tamaño del logo ajustado */
+}
+
+/* Estilos para el contenedor de redes sociales dentro del header */
+#header-bienvenido .social-media {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los íconos sociales */
+    align-items: center;
+    /* Alinea los íconos sociales verticalmente en el centro */
+}
+
+/* Estilos para los íconos de redes sociales dentro del contenedor */
+#header-bienvenido .social-media a img {
+    height: 30px;
+    /* Ajusta la altura de los íconos sociales a 30px */
+    /* Tamaño ajustado para redes sociales */
+    margin: 0 20px;
+    /* Añade un margen horizontal de 20px entre los íconos */
+    /* Más separación entre los íconos */
+}
+
+/* Estilos para el contenedor de navegación dentro del header */
+#header-bienvenido nav {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los enlaces de navegación */
+    align-items: center;
+    /* Alinea los enlaces de navegación verticalmente en el centro */
+}
+
+/* Estilos para los enlaces dentro del contenedor de navegación */
+#header-bienvenido nav a {
+    margin: 0 25px;
+    /* Añade un margen horizontal de 25px entre los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: white;
+    /* Establece el color del texto de los enlaces a blanco */
+}
+
+/* Estilos para el icono de la barra lateral dentro del header */
+#header-bienvenido .sidebar-icon {
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el icono */
+    color: white;
+    /* Establece el color del icono a blanco */
+    margin-left: 10px;
+    /* Añade un margen a la izquierda del icono */
+}
+
+/* Estilos para los botones dentro del contenedor nav-bienvenido */
+#header-bienvenido .nav-bienvenido button {
+    padding: 17px;
+    /* Añade un espacio interno de 17px alrededor del contenido del botón */
+    border-radius: 50px;
+    /* Redondea los bordes del botón */
+    margin: 10px;
+    /* Añade un margen de 10px alrededor del botón */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+    background-color: rgb(45, 240, 42);
+    /* Establece el color de fondo del botón */
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    /* Añade una sombra ligera al botón */
+    letter-spacing: 1.5px;
+    /* Espacia las letras del texto dentro del botón */
+    text-transform: uppercase;
+    /* Convierte el texto dentro del botón a mayúsculas */
+    font-size: 15px;
+    /* Establece el tamaño de fuente del texto dentro del botón */
+    transition: all 0.5s ease;
+    /* Añade una transición suave para todos los cambios */
+}
+
+/* Estilos para el botón al pasar el mouse sobre él */
+#header-bienvenido .nav-bienvenido button:hover {
+    letter-spacing: 3px;
+    /* Aumenta el espaciado entre letras al pasar el mouse */
+    background-color: hsl(100, 96%, 22%);
+    /* Cambia el color de fondo del botón al pasar el mouse */
+    color: hsl(0, 0%, 100%);
+    /* Cambia el color del texto del botón al pasar el mouse */
+    box-shadow: rgb(2, 159, 2) 0px 7px 29px 0px;
+    /* Añade una sombra más pronunciada al botón al pasar el mouse */
+}
+
+/* Estilos para el botón cuando está activo (presionado) */
+#header-bienvenido .nav-bienvenido button:active {
+    letter-spacing: 3px;
+    /* Mantiene el espaciado entre letras al presionar el botón */
+    background-color: hsl(122, 90%, 12%);
+    /* Cambia el color de fondo del botón al presionar */
+    color: hsl(0, 0%, 100%);
+    /* Cambia el color del texto del botón al presionar */
+    box-shadow: rgb(70, 220, 24) 0px 0px 0px 0px;
+    /* Elimina la sombra al presionar el botón */
+    transform: translateY(10px);
+    /* Desplaza el botón hacia abajo cuando está presionado */
+    transition: 100ms;
+    /* Añade una transición rápida para el cambio de estilo */
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Estilos para el contenedor principal de la página de bienvenida */
+#main-bienvenida {
+    background-image: url("../imagenes/bienvenida-img/fondo.jpg");
+    /* Establece una imagen de fondo para el contenedor */
+    background-size: cover;
+    /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-repeat: no-repeat;
+    /* Evita que la imagen de fondo se repita */
+    background-attachment: fixed;
+    /* Mantiene la imagen de fondo fija al hacer scroll */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+    flex: 1;
+    /* Hace que el contenedor ocupe el espacio disponible */
+    /* Para que el main ocupe el espacio disponible */
+    padding-bottom: 20px;
+    /* Añade un espacio interno de 20px en la parte inferior del contenedor */
+}
+
+/* Estilos para las secciones de bienvenida y contenido dentro del main-bienvenida */
+.welcome-bienvenida,
+.content-section-bienvenida {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos */
+    padding: 20px;
+    /* Añade un espacio interno de 20px alrededor del contenido */
+    background-color: rgba(255, 255, 255, 0.842);
+    /* Establece un fondo blanco semi-transparente */
+    /* Fondo blanco para que parezca unido al header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.99);
+    /* Añade una sombra ligera alrededor del contenedor */
+}
+
+/* Estilos específicos para la sección de bienvenida */
+.welcome-bienvenida {
+    background-image: url("../imagenes/bienvenida-img/gray-black-the-backdrop-royalty-free-thumbnail.jpg");
+    /* Establece una imagen de fondo para la sección de bienvenida */
+    background-size: cover;
+    /* Ajusta la imagen de fondo para cubrir toda la sección */
+    background-repeat: no-repeat;
+    /* Evita que la imagen de fondo se repita */
+    background-attachment: fixed;
+    /* Mantiene la imagen de fondo fija al hacer scroll */
+}
+
+/* Estilos específicos para la sección de contenido dentro de la bienvenida */
+.content-section-bienvenida {
+    margin-top: 20px;
+    /* Añade un margen superior de 20px */
+    margin-left: 100px;
+    /* Añade un margen izquierdo de 100px */
+    margin-right: 100px;
+    /* Añade un margen derecho de 100px */
+}
+
+/* Estilos para el contenedor de texto en la sección de bienvenida */
+.welcome-bienvenida .text-binvenda,
+.content-section-bienvenida .text-bienbenifa {
+    flex: 1;
+    /* Hace que el contenedor de texto ocupe una parte proporcional del espacio */
+    padding-right: 20px;
+    /* Añade un espacio interno de 20px a la derecha del texto */
+}
+
+/* Estilos para la imagen en la sección de bienvenida */
+.welcome-bienvenida .image-bienvenida {
+    flex: 1;
+    /* Hace que la imagen ocupe una parte proporcional del espacio */
+    max-width: 100%;
+    /* Asegura que la imagen no sea más grande que su contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    overflow: hidden;
+    /* Esconde cualquier contenido que sobresalga del contenedor */
+}
+
+/* Estilos para las imágenes dentro del contenedor de la imagen en la sección de bienvenida */
+.welcome-bienvenida .image-bienvenida img {
+    max-width: 90%;
+    /* Asegura que la imagen no sea más grande que el 90% del ancho de su contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    display: block;
+    /* Elimina los espacios blancos adicionales alrededor de la imagen */
+}
+
+/* Estilos para las imágenes pequeñas en la sección de contenido */
+.content-section-bienvenida .image img {
+    max-width: 200px;
+    /* Establece un tamaño máximo de ancho para las imágenes pequeñas */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+/* Estilos para el texto con color naranja en la sección de bienvenida */
+.HCJ-bienvenido {
+    color: orange;
+    /* Establece el color del texto a naranja */
+}
+
+/* Estilos para el botón en la sección de bienvenida */
+.btn-bienvenida {
+    padding-top: 20px;
+    /* Añade un espacio interno de 20px en la parte superior del botón */
+}
+
+/* Estilos para el texto con color blanco en la sección de bienvenida */
+.p-bievenida {
+    color: white;
+    /* Establece el color del texto a blanco */
+}
+
+/* Estilos para el botón dentro de la sección de bienvenida */
+.welcome-bienvenida .text-binvenda .btn-bienvenida .button {
+    padding: 17px;
+    /* Añade un espacio interno de 17px alrededor del contenido del botón */
+    border-radius: 50px;
+    /* Redondea los bordes del botón */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+    border: 0;
+    /* Elimina el borde del botón */
+    margin: 10px;
+    /* Añade un margen de 10px alrededor del botón */
+    background-color: rgb(45, 240, 42);
+    /* Establece el color de fondo del botón */
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    /* Añade una sombra ligera al botón */
+    letter-spacing: 1.5px;
+    /* Espacia las letras del texto dentro del botón */
+    text-transform: uppercase;
+    /* Convierte el texto dentro del botón a mayúsculas */
+    font-size: 15px;
+    /* Establece el tamaño de fuente del texto dentro del botón */
+    transition: all 0.5s ease;
+    /* Añade una transición suave para todos los cambios */
+}
+
+/* Estilos para el botón en la sección de bienvenida al pasar el mouse sobre él */
+.welcome-bienvenida .text-binvenda .btn-bienvenida .button:hover {
+    letter-spacing: 3px;
+    /* Aumenta el espaciado entre letras al pasar el mouse */
+    background-color: hsl(100, 96%, 22%);
+    /* Cambia el color de fondo del botón al pasar el mouse */
+    color: hsl(0, 0%, 100%);
+    /* Cambia el color del texto del botón al pasar el mouse */
+    box-shadow: rgb(2, 159, 2) 0px 7px 29px 0px;
+    /* Añade una sombra más pronunciada al botón al pasar el mouse */
+}
+
+/* Estilos para el botón en la sección de bienvenida cuando está activo (presionado) */
+.welcome-bienvenida .text-binvenda .btn-bienvenida .button:active {
+    letter-spacing: 3px;
+    /* Mantiene el espaciado entre letras al presionar el botón */
+    background-color: hsl(122, 90%, 12%);
+    /* Cambia el color de fondo del botón al presionar */
+    color: hsl(0, 0%, 100%);
+    /* Cambia el color del texto del botón al presionar */
+    box-shadow: rgb(70, 220, 24) 0px 0px 0px 0px;
+    /* Elimina la sombra al presionar el botón */
+    transform: translateY(10px);
+    /* Desplaza el botón hacia abajo cuando está presionado */
+    transition: 100ms;
+    /* Añade una transición rápida para el cambio de estilo */
+}
+
+/* Estilos para los encabezados en la sección de texto de bienvenida */
+.text-bienbenifa h2 {
+    color: black;
+    /* Establece el color del texto a negro */
+}
+
+/* Estilos para el contenedor del footer */
+#footer-bienvenida {
+    background-color: #252424;
+    /* Color de fondo oscuro */
+    color: white;
+    /* Establece el color del texto a blanco */
+    padding: 10px;
+    /* Añade un espacio interno de 10px alrededor del contenedor */
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos */
+    justify-content: space-between;
+    /* Espacia los elementos hijos al máximo */
+    align-items: center;
+    /* Alinea los elementos hijos verticalmente en el centro */
+    flex-wrap: wrap;
+    /* Permite que los elementos hijos se envuelvan en varias líneas si es necesario */
+}
+
+/* Estilos para los enlaces dentro del contenedor de navegación del footer */
+#footer-bienvenida nav.footer-nav a {
+    color: white;
+    /* Establece el color del texto de los enlaces a blanco */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    margin: 0 10px;
+    /* Añade un margen horizontal de 10px entre los enlaces */
+}
+
+/* Estilos para el texto de contacto en el footer */
+#footer-bienvenida .contacto-bienvenida .p-bienvenida {
+    margin: 5px 0;
+    /* Añade un margen vertical de 5px */
+    font-size: 17px;
+    /* Establece el tamaño de fuente del texto */
+    /* Alineación del texto al centro */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+}

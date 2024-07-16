@@ -1,0 +1,404 @@
+/* Estilos para el contenedor principal de la página de galería */
+#body-gale {
+    font-family: Arial, sans-serif;
+    /* Fuente para el contenido de la página */
+    margin: 0;
+    /* Elimina el margen predeterminado */
+    padding: 0;
+    /* Elimina el relleno predeterminado */
+    background: url('../imagenes/galeria-img/fondo54.jpg') no-repeat center center fixed;
+    /* Imagen de fondo fija y centrada */
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el contenedor */
+    color: white;
+    /* Color del texto en blanco */
+    display: flex;
+    /* Utiliza flexbox para la disposición del contenido */
+    flex-direction: column;
+    /* Dispone los elementos en una columna */
+    min-height: 100vh;
+    /* Altura mínima del 100% de la ventana de visualización */
+}
+
+/* Estilos para el encabezado de la galería */
+#header-cale {
+    background-color: #252424;
+    /* Color de fondo oscuro */
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos dentro del encabezado */
+    justify-content: space-between;
+    /* Espacia los elementos al máximo */
+    align-items: center;
+    /* Alinea los elementos verticalmente en el centro */
+    padding: 10px;
+    /* Espacio interno de 10px alrededor del encabezado */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en varias líneas si es necesario */
+}
+
+/* Estilos para el logo dentro del encabezado */
+#header-cale .logo img {
+    height: 90px;
+    /* Tamaño del logo ajustado */
+}
+
+/* Estilos para el contenedor de redes sociales dentro del encabezado */
+#header-cale .social-media {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los íconos sociales */
+    align-items: center;
+    /* Alinea los íconos verticalmente en el centro */
+}
+
+/* Estilos para los íconos de redes sociales dentro del contenedor */
+#header-cale .social-media a img {
+    height: 30px;
+    /* Tamaño ajustado para los íconos de redes sociales */
+    margin: 0 20px;
+    /* Más separación entre los íconos */
+}
+
+/* Estilos para el contenedor de navegación dentro del encabezado */
+#header-cale nav {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los enlaces de navegación */
+    align-items: center;
+    /* Alinea los enlaces verticalmente en el centro */
+}
+
+/* Estilos para los enlaces dentro del contenedor de navegación */
+#header-cale nav a {
+    margin: 0 25px;
+    /* Espacio horizontal de 25px entre los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: white;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para el icono de la barra lateral dentro del encabezado */
+#header-cale .sidebar-icon {
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el icono */
+    color: white;
+    /* Color del icono en blanco */
+    margin-left: 10px;
+    /* Margen a la izquierda del icono */
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    display: none;
+    /* Oculta la barra lateral por defecto */
+    background-color: #dad9d9;
+    /* Color de fondo claro para la barra lateral */
+    position: fixed;
+    /* Fija la barra lateral en una posición específica */
+    top: 0;
+    /* Posiciona la barra lateral en la parte superior */
+    right: 0;
+    /* Posiciona la barra lateral en el lado derecho */
+    height: 40vh;
+    /* Altura reducida de la barra lateral */
+    width: 250px;
+    /* Ancho fijo de la barra lateral */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /* Sombra a la izquierda de la barra lateral */
+    padding: 20px;
+    /* Espacio interno de 20px alrededor del contenido */
+    overflow-y: auto;
+    /* Permite el desplazamiento vertical si el contenido excede la altura */
+    z-index: 1000;
+    /* Asegura que la barra lateral esté por encima de otros elementos */
+}
+
+/* Estilos para el botón de cierre dentro de la barra lateral */
+.sidebar .close-btn {
+    font-size: 30px;
+    /* Tamaño de la fuente del botón de cierre */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+    color: black;
+    /* Color del botón de cierre en negro */
+    text-align: right;
+    /* Alinea el botón a la derecha */
+}
+
+/* Estilos para la información del usuario dentro de la barra lateral */
+.sidebar .user-info {
+    margin-bottom: 20px;
+    /* Espacio adicional debajo de la información del usuario */
+}
+
+/* Estilos para los párrafos dentro del contenedor de información del usuario */
+.sidebar .user-info p {
+    color: #000000;
+    /* Color del texto en negro */
+    margin: 5px 0;
+    /* Margen vertical de 5px */
+    font-size: 1.2em;
+    /* Tamaño de la fuente ajustado */
+}
+
+/* Estilos para los separadores dentro de la barra lateral */
+.sidebar hr {
+    border: 0;
+    /* Elimina el borde del separador */
+    height: 1px;
+    /* Altura del separador */
+    background-color: #000000;
+    /* Color de fondo del separador en negro */
+    margin: 10px 0;
+    /* Espacio vertical de 10px alrededor del separador */
+}
+
+/* Estilos para los enlaces dentro de la barra lateral */
+.sidebar a {
+    display: block;
+    /* Hace que cada enlace ocupe una línea completa */
+    margin: 20px 0;
+    /* Espacio vertical de 20px entre los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: black;
+    /* Color del texto de los enlaces en negro */
+    font-size: 1.2em;
+    /* Tamaño de la fuente ajustado */
+}
+
+/* Estilos para el contenedor principal de la galería */
+#main-cale {
+    padding: 20px;
+    /* Espacio interno de 20px alrededor del contenido */
+}
+
+/* Estilos para el encabezado de la galería */
+.gallery-header-cale {
+    text-align: center;
+    /* Centra el texto dentro del contenedor del encabezado de la galería */
+    margin-bottom: 40px;
+    /* Margen inferior de 40px */
+    background-color: rgba(0, 0, 0, 0.96);
+    /* Fondo negro semitransparente */
+}
+
+/* Estilos para el título dentro del encabezado de la galería */
+.gallery-header-cale h2 {
+    margin: 0;
+    /* Elimina el margen superior e inferior */
+    font-size: 2em;
+    /* Tamaño de la fuente del título */
+    color: #fff;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para el párrafo dentro del encabezado de la galería */
+.gallery-header-cale p {
+    font-size: 1.2em;
+    /* Tamaño de la fuente del párrafo */
+    color: #ddd;
+    /* Color del texto en gris claro */
+}
+
+/* Estilos para el contenedor de los elementos de la galería */
+.gallery-container-cale {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos de la galería */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en varias líneas */
+    gap: 10px;
+    /* Espacio de 10px entre los elementos */
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+}
+
+/* Estilos para cada elemento de la galería */
+.gallery-item-cale {
+    position: relative;
+    /* Posiciona el elemento de manera relativa */
+    flex: 1 1 calc(20% - 20px);
+    /* Ajusta el ancho de cada elemento al 20% menos el margen */
+    margin: 10px;
+    /* Margen de 10px alrededor de cada elemento */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+    overflow: hidden;
+    /* Oculta el contenido que desborda */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el elemento */
+    transition: transform 0.3s;
+    /* Transición suave para el efecto de escalado */
+    background-color: #252424;
+    /* Color de fondo oscuro para cada elemento */
+    height: 200px;
+    /* Altura fija para los elementos */
+    color: #ffffff;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para las imágenes dentro de los elementos de la galería */
+.gallery-item-cale img {
+    width: 100%;
+    /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%;
+    /* Ajusta la altura de la imagen al 100% del contenedor */
+    object-fit: cover;
+    /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+}
+
+/* Estilos para el pie de página de la galería */
+.gallery-item-cale figcaption {
+    position: absolute;
+    /* Posiciona el pie de página de manera absoluta */
+    bottom: 0;
+    /* Alinea el pie de página al fondo del contenedor */
+    left: 0;
+    /* Alinea el pie de página al borde izquierdo del contenedor */
+    right: 0;
+    /* Alinea el pie de página al borde derecho del contenedor */
+    padding: 10px;
+    /* Espacio interno de 10px alrededor del pie de página */
+    text-align: center;
+    /* Centra el texto dentro del pie de página */
+    color: white;
+    /* Color del texto en blanco */
+    background-color: rgba(0, 0, 0, 0.95);
+    /* Fondo negro semitransparente */
+    font-size: 1em;
+    /* Tamaño de la fuente del pie de página */
+}
+
+/* Estilos para el efecto hover en los elementos de la galería */
+.gallery-item-cale:hover {
+    transform: scale(1.05);
+    /* Escala el elemento al 105% de su tamaño original */
+}
+
+/* Estilos para el modal de la galería */
+.modal-cale {
+    display: none;
+    /* Oculta el modal por defecto */
+    position: fixed;
+    /* Fija el modal en una posición específica */
+    z-index: 1000;
+    /* Asegura que el modal esté por encima de otros elementos */
+    padding-top: 60px;
+    /* Espacio interno superior de 60px */
+    left: 0;
+    /* Posiciona el modal en el borde izquierdo */
+    top: 0;
+    /* Posiciona el modal en el borde superior */
+    width: 100%;
+    /* Ancho del modal al 100% de la ventana */
+    height: 100%;
+    /* Altura del modal al 100% de la ventana */
+    overflow: auto;
+    /* Permite el desplazamiento si el contenido excede la altura */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fondo negro semitransparente */
+}
+
+/* Estilos para el contenido del modal */
+.modal-content-cale {
+    margin: auto;
+    /* Centra el contenido del modal */
+    display: block;
+    /* Muestra el contenido como un bloque */
+    width: 80%;
+    /* Ancho del contenido al 80% del modal */
+    max-width: 700px;
+    /* Ancho máximo del contenido */
+    height: auto;
+    /* Altura automática del contenido */
+    max-height: 80vh;
+    /* Altura máxima del contenido */
+    object-fit: cover;
+    /* Ajusta el tamaño del contenido para cubrir el contenedor */
+}
+
+/* Estilos para el pie de foto dentro del modal */
+#modal-caption-cale {
+    margin: auto;
+    /* Centra el pie de foto */
+    display: block;
+    /* Muestra el pie de foto como un bloque */
+    width: 80%;
+    /* Ancho del pie de foto al 80% del modal */
+    max-width: 700px;
+    /* Ancho máximo del pie de foto */
+    text-align: center;
+    /* Centra el texto del pie de foto */
+    color: #ccc;
+    /* Color del texto en gris claro */
+    padding: 10px 0;
+    /* Espacio interno vertical de 10px */
+}
+
+/* Estilos para el botón de cierre dentro del modal */
+.close-cale {
+    position: absolute;
+    /* Posiciona el botón de cierre de manera absoluta */
+    top: 30px;
+    /* Posiciona el botón 30px desde la parte superior */
+    right: 35px;
+    /* Posiciona el botón 35px desde el lado derecho */
+    color: #f1f1f1;
+    /* Color del texto del botón de cierre en blanco */
+    font-size: 40px;
+    /* Tamaño de la fuente del botón de cierre */
+    font-weight: bold;
+    /* Fuente en negrita para el botón de cierre */
+    transition: 0.3s;
+    /* Transición suave para el cambio de color */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+}
+
+/* Estilos para el botón de cierre al pasar el mouse */
+.close-cale:hover,
+.close-cale:focus {
+    color: #bbb;
+    /* Cambia el color del botón de cierre al pasar el mouse */
+    text-decoration: none;
+    /* Elimina el subrayado del botón de cierre */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+}
+
+/* Estilos para el pie de página de la galería */
+#footer-cale {
+    background-color: #252424;
+    /* Color de fondo oscuro para el pie de página */
+    color: white;
+    /* Color del texto en blanco */
+    padding: 10px;
+    /* Espacio interno de 10px alrededor del pie de página */
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos dentro del pie de página */
+    justify-content: space-between;
+    /* Espacia los elementos al máximo */
+    align-items: center;
+    /* Alinea los elementos verticalmente en el centro */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en varias líneas si es necesario */
+}
+
+/* Estilos para los enlaces dentro del pie de página */
+#footer-cale nav.footer-nav a {
+    color: white;
+    /* Color del texto de los enlaces en blanco */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    margin: 0 10px;
+    /* Espacio horizontal de 10px entre los enlaces */
+}
+
+/* Estilos para el texto de contacto dentro del pie de página */
+#footer-cale .contacto-cale .p-cale {
+    margin: 5px 0;
+    /* Margen vertical de 5px */
+    font-size: 17px;
+    /* Tamaño de la fuente del texto de contacto */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+}

@@ -1,0 +1,458 @@
+/* Estilos para el contenedor principal del calendario */
+#body-calendario {
+    font-family: Arial, sans-serif;
+    /* Establece la fuente para todo el contenido del calendario */
+    margin: 0;
+    /* Elimina el margen predeterminado */
+    padding: 0;
+    /* Elimina el relleno predeterminado */
+    background: url('../imagenes/calendario-img/calendario-img.jpg') no-repeat center center fixed;
+    /* Establece una imagen de fondo que no se repite y está fija al hacer scroll */
+    background-size: cover;
+    /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    color: white;
+    /* Establece el color del texto a blanco */
+    display: flex;
+    /* Utiliza flexbox para la disposición del contenido */
+    flex-direction: column;
+    /* Dispone los elementos en una columna */
+    min-height: 100vh;
+    /* Establece una altura mínima del 100% de la ventana de visualización */
+}
+
+/* Estilos para el contenedor del header del calendario */
+#header-calendario {
+    background-color: #252424;
+    /* Color de fondo oscuro */
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos dentro del header */
+    justify-content: space-between;
+    /* Espacia los elementos al máximo */
+    align-items: center;
+    /* Alinea los elementos verticalmente en el centro */
+    padding: 10px;
+    /* Añade un espacio interno de 10px alrededor del contenedor */
+    flex-wrap: wrap;
+    /* Permite que los elementos hijos se envuelvan en varias líneas si es necesario */
+}
+
+/* Estilos para la imagen del logo dentro del header */
+#header-calendario .logo img {
+    height: 90px;
+    /* Ajusta la altura del logo a 90px */
+    /* Tamaño del logo ajustado */
+}
+
+/* Estilos para el contenedor de redes sociales dentro del header */
+#header-calendario .social-media {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los íconos sociales */
+    align-items: center;
+    /* Alinea los íconos sociales verticalmente en el centro */
+}
+
+/* Estilos para los íconos de redes sociales dentro del contenedor */
+#header-calendario .social-media a img {
+    height: 30px;
+    /* Ajusta la altura de los íconos sociales a 30px */
+    /* Tamaño ajustado para redes sociales */
+    margin: 0 20px;
+    /* Añade un margen horizontal de 20px entre los íconos */
+    /* Más separación entre los íconos */
+}
+
+/* Estilos para el contenedor de navegación dentro del header */
+#header-calendario nav {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los enlaces de navegación */
+    align-items: center;
+    /* Alinea los enlaces de navegación verticalmente en el centro */
+}
+
+/* Estilos para los enlaces dentro del contenedor de navegación */
+#header-calendario nav a {
+    margin: 0 25px;
+    /* Añade un margen horizontal de 25px entre los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: white;
+    /* Establece el color del texto de los enlaces a blanco */
+}
+
+/* Estilos para el icono de la barra lateral dentro del header */
+#header-calendario .sidebar-icon {
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el icono */
+    color: white;
+    /* Establece el color del icono a blanco */
+    margin-left: 10px;
+    /* Añade un margen a la izquierda del icono */
+}
+
+/* Estilos para el contenedor de la barra lateral */
+.sidebar {
+    display: none;
+    /* Oculta la barra lateral por defecto */
+    background-color: #dad9d9;
+    /* Color de fondo claro para la barra lateral */
+    position: fixed;
+    /* Fija la barra lateral en una posición específica */
+    top: 0;
+    /* Posiciona la barra lateral en la parte superior */
+    right: 0;
+    /* Posiciona la barra lateral en el lado derecho */
+    height: 50vh;
+    /* Altura de la barra lateral establecida en el 50% de la ventana de visualización */
+    width: 250px;
+    /* Establece un ancho fijo para la barra lateral */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /* Añade una sombra al contenedor de la barra lateral */
+    padding: 20px;
+    /* Añade un espacio interno de 20px alrededor del contenido */
+    overflow-y: auto;
+    /* Permite el desplazamiento vertical si el contenido es más grande que la altura de la barra lateral */
+    z-index: 1000;
+    /* Asegura que la barra lateral esté por encima de otros elementos */
+}
+
+/* Estilos para el botón de cierre en la barra lateral */
+.sidebar .close-btn {
+    font-size: 30px;
+    /* Establece el tamaño de la fuente para el botón de cierre */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+    color: black;
+    /* Establece el color del botón de cierre a negro */
+    text-align: right;
+    /* Alinea el texto del botón de cierre a la derecha */
+}
+
+/* Estilos para la información del usuario dentro de la barra lateral */
+.sidebar .user-info {
+    margin-bottom: 20px;
+    /* Añade un margen inferior de 20px */
+    /* Espacio adicional debajo de la información del usuario */
+}
+
+/* Estilos para los párrafos dentro del contenedor de información del usuario */
+.sidebar .user-info p {
+    color: #000000;
+    /* Establece el color del texto a negro */
+    margin: 5px 0;
+    /* Añade un margen vertical de 5px */
+    font-size: 1.2em;
+    /* Ajusta el tamaño de la fuente */
+    /* Tamaño de fuente ajustado */
+}
+
+/* Estilos para los separadores dentro de la barra lateral */
+.sidebar hr {
+    border: 0;
+    /* Elimina el borde del separador */
+    height: 1px;
+    /* Establece una altura de 1px para el separador */
+    background-color: #000000;
+    /* Establece el color de fondo del separador a negro */
+    margin: 10px 0;
+    /* Añade un margen vertical de 10px alrededor del separador */
+    /* Espacio entre los separadores y los enlaces */
+}
+
+/* Estilos para los enlaces dentro de la barra lateral */
+.sidebar a {
+    display: block;
+    /* Hace que cada enlace ocupe una línea completa */
+    margin: 20px 0;
+    /* Añade un margen vertical de 20px entre los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: black;
+    /* Establece el color del texto de los enlaces a negro */
+    font-size: 1.2em;
+    /* Ajusta el tamaño de la fuente para los enlaces */
+    /* Tamaño de letra ajustado para los botones de acceso rápido */
+}
+
+/* Estilos para el contenedor principal del calendario */
+#main-calendario {
+    padding: 20px;
+    /* Añade un espacio interno de 20px alrededor del contenido */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Establece un color de fondo semi-transparente para el contenedor */
+}
+
+/* Estilos para el encabezado del calendario */
+.calendar-header-calendario {
+    text-align: center;
+    /* Centra el texto del encabezado */
+    margin-bottom: 40px;
+    /* Añade un margen inferior de 40px */
+}
+
+/* Estilos para el encabezado del calendario h2 */
+.calendar-header-calendario h2 {
+    margin: 0;
+    /* Elimina el margen alrededor del encabezado */
+    font-size: 2em;
+    /* Ajusta el tamaño de la fuente del encabezado */
+}
+
+/* Estilos para el texto del encabezado del calendario */
+.calendar-header-calendario p {
+    font-size: 1.2em;
+    /* Ajusta el tamaño de la fuente del párrafo */
+    color: #ddd;
+    /* Establece el color del texto a gris claro */
+}
+
+/* Estilos para el contenedor del calendario */
+.calendar-container-calendario {
+    display: flex;
+    /* Utiliza flexbox para la disposición del contenido del calendario */
+    flex-direction: column;
+    /* Dispone los elementos en una columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    margin-bottom: 40px;
+    /* Añade un margen inferior de 40px */
+}
+
+/* Estilos para los controles del calendario */
+.calendar-controls-calendario {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los controles del calendario */
+    justify-content: space-between;
+    /* Espacia los controles al máximo */
+    width: 100%;
+    /* Establece el ancho al 100% del contenedor padre */
+    max-width: 500px;
+    /* Establece un ancho máximo para los controles del calendario */
+    margin-bottom: 20px;
+    /* Añade un margen inferior de 20px */
+}
+
+/* Estilos para los botones de los controles del calendario */
+.calendar-controls-calendario button {
+    padding: 10px;
+    /* Añade un espacio interno de 10px alrededor del botón */
+    font-size: 1em;
+    /* Ajusta el tamaño de la fuente del botón */
+    border-radius: 5px;
+    /* Redondea los bordes del botón */
+    border: none;
+    /* Elimina el borde del botón */
+    background-color: #4CAF50;
+    /* Establece el color de fondo del botón a verde */
+    color: white;
+    /* Establece el color del texto del botón a blanco */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+    transition: background-color 0.3s;
+    /* Añade una transición suave para el color de fondo del botón */
+}
+
+/* Estilos para los botones de los controles del calendario al pasar el mouse */
+.calendar-controls-calendario button:hover {
+    background-color: #45a049;
+    /* Cambia el color de fondo a un verde más oscuro al pasar el mouse */
+}
+
+/* Estilos para el texto de los controles del calendario */
+.calendar-controls-calendario span {
+    font-size: 1.5em;
+    /* Ajusta el tamaño de la fuente */
+    color: white;
+    /* Establece el color del texto a blanco */
+}
+
+/* Estilos para el contenedor de las celdas del calendario */
+.calendar-calendario {
+    display: grid;
+    /* Utiliza grid para la disposición de las celdas del calendario */
+    grid-template-columns: repeat(7, 1fr);
+    /* Crea 7 columnas de igual tamaño */
+    gap: 10px;
+    /* Añade un espacio de 10px entre las celdas */
+    width: 100%;
+    /* Establece el ancho al 100% del contenedor padre */
+    max-width: 500px;
+    /* Establece un ancho máximo para el contenedor del calendario */
+}
+
+/* Estilos para las celdas del calendario */
+.calendar-calendario div {
+    background-color: rgba(118, 118, 118, 0.96);
+    /* Establece un color de fondo gris claro semi-transparente */
+    padding: 10px;
+    /* Añade un espacio interno de 10px alrededor del contenido */
+    border-radius: 5px;
+    /* Redondea los bordes de las celdas */
+    text-align: center;
+    /* Centra el texto dentro de las celdas */
+    color: white;
+    /* Establece el color del texto a blanco */
+}
+
+/* Estilos específicos para las celdas que representan los días del calendario */
+.calendar-calendario div.day {
+    height: 60px;
+    /* Establece una altura fija para las celdas de los días */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre la celda */
+    display: flex;
+    /* Utiliza flexbox para la disposición del contenido dentro de la celda */
+    flex-direction: column;
+    /* Dispone el contenido en una columna */
+    justify-content: space-between;
+    /* Espacia el contenido verticalmente */
+}
+
+/* Estilos para las celdas de los días al pasar el mouse */
+.calendar-calendario div.day:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Cambia el color de fondo a un negro más oscuro al pasar el mouse */
+}
+
+/* Estilos para el contenedor de detalles del evento */
+.event-details-calendario {
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Establece un color de fondo negro semi-transparente */
+    padding: 20px;
+    /* Añade un espacio interno de 20px alrededor del contenido */
+    border-radius: 5px;
+    /* Redondea los bordes del contenedor de detalles del evento */
+    width: 100%;
+    /* Establece el ancho al 100% del contenedor padre */
+    max-width: 500px;
+    /* Establece un ancho máximo para el contenedor de detalles del evento */
+}
+
+/* Estilos para el encabezado de los detalles del evento */
+.event-details-calendario h3 {
+    margin-top: 0;
+    /* Elimina el margen superior del encabezado */
+    font-size: 1.5em;
+    /* Ajusta el tamaño de la fuente del encabezado */
+    color: #fff;
+    /* Establece el color del texto a blanco */
+}
+
+/* Estilos para el formulario de eventos */
+#event-form {
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos del formulario */
+    flex-direction: column;
+    /* Dispone los elementos en una columna */
+    gap: 10px;
+    /* Añade un espacio de 10px entre los elementos */
+    margin-bottom: 20px;
+    /* Añade un margen inferior de 20px */
+}
+
+/* Estilos para el botón de cancelar dentro del formulario de eventos */
+.cancelar-cale {
+    background-color: red;
+    /* Establece el color de fondo del botón a rojo */
+    color: white;
+    /* Establece el color del texto a blanco */
+    border: none;
+    /* Elimina el borde del botón */
+    padding: 10px 20px;
+    /* Añade un espacio interno de 10px en la parte superior e inferior y 20px a los lados */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+    border-radius: 5px;
+    /* Redondea los bordes del botón */
+}
+
+/* Estilos para los campos del formulario (input, textarea) */
+#event-form input,
+#event-form textarea,
+#event-form button {
+    padding: 10px;
+    /* Añade un espacio interno de 10px alrededor del contenido */
+    font-size: 1em;
+    /* Ajusta el tamaño de la fuente */
+    border-radius: 5px;
+    /* Redondea los bordes de los campos */
+    border: none;
+    /* Elimina el borde de los campos */
+}
+
+/* Estilos para el botón de enviar dentro del formulario de eventos */
+#event-form button {
+    background-color: #4CAF50;
+    /* Establece el color de fondo del botón a verde */
+    color: white;
+    /* Establece el color del texto a blanco */
+    cursor: pointer;
+    /* Cambia el cursor a una mano al pasar sobre el botón */
+    transition: background-color 0.3s;
+    /* Añade una transición suave para el color de fondo del botón */
+}
+
+/* Estilos para el botón de enviar dentro del formulario de eventos al pasar el mouse */
+#event-form button:hover {
+    background-color: #45a049;
+    /* Cambia el color de fondo a un verde más oscuro al pasar el mouse */
+}
+
+/* Estilos para la lista de eventos */
+#event-list {
+    list-style: none;
+    /* Elimina los puntos de la lista */
+    padding: 0;
+    /* Elimina el relleno predeterminado */
+}
+
+/* Estilos para los elementos de la lista de eventos */
+#event-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Establece un color de fondo blanco semi-transparente */
+    padding: 10px;
+    /* Añade un espacio interno de 10px alrededor del contenido */
+    border-radius: 5px;
+    /* Redondea los bordes de los elementos de la lista */
+    margin-bottom: 10px;
+    /* Añade un margen inferior de 10px entre los elementos de la lista */
+    color: white;
+    /* Establece el color del texto a blanco */
+}
+
+/* Estilos para el contenedor del footer del calendario */
+#footer-calendario {
+    background-color: #252424;
+    /* Color de fondo oscuro */
+    color: white;
+    /* Establece el color del texto a blanco */
+    padding: 10px;
+    /* Añade un espacio interno de 10px alrededor del contenedor */
+    display: flex;
+    /* Utiliza flexbox para la disposición de los elementos dentro del footer */
+    justify-content: space-between;
+    /* Espacia los elementos al máximo */
+    align-items: center;
+    /* Alinea los elementos verticalmente en el centro */
+    flex-wrap: wrap;
+    /* Permite que los elementos hijos se envuelvan en varias líneas si es necesario */
+}
+
+/* Estilos para los enlaces dentro del contenedor de navegación del footer */
+#footer-calendario nav.footer-nav a {
+    color: white;
+    /* Establece el color del texto de los enlaces a blanco */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    margin: 0 10px;
+    /* Añade un margen horizontal de 10px entre los enlaces */
+}
+
+/* Estilos para el texto de contacto en el footer */
+#footer-calendario .contacto-calendario .p-calendario {
+    margin: 5px 0;
+    /* Añade un margen vertical de 5px */
+    font-size: 17px;
+    /* Ajusta el tamaño de la fuente del texto */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+}

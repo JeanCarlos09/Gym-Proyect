@@ -1,0 +1,46 @@
+{
+  "title": "Registro de Usuario",
+  "fields": [
+    {
+      "type": "text",
+      "label": "Nombre:",
+      "model": "name",
+      "placeholder": "Nombre"
+    },
+    {
+      "type": "text",
+      "label": "Apellido:",
+      "model": "surname",
+      "placeholder": "Apellido"
+    },
+    {
+      "type": "",
+      "label": "Correo electrónico:",
+      "model": "email",
+      "placeholder": "Correo electrónico"
+    },
+    {
+      "type": "password",
+      "label": "Contraseña:",
+      "model": "password",
+      "placeholder": "Contraseña"
+    },
+    {
+      "type": "password",
+      "label": "Confirmar Contraseña:",
+      "model": "confirmPassword",
+      "placeholder": "Confirmar Contraseña"
+    }
+  ],
+  "buttons": [
+    {
+      "id": "boton-register",
+      "text": "Registrarse",
+      "type": "submit"
+    }
+  ],
+  "links": [
+    { "text": "Ya tienes cuenta", "href": "/inicio", "linkText": "Iniciar Sesión" },
+    { "text": "Volver al inicio", "href": "/" }
+  ]
+}

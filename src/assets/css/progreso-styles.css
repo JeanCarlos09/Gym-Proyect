@@ -1,0 +1,492 @@
+/* Estilos generales del cuerpo del documento */
+#body-progre {
+    font-family: Arial, sans-serif;
+    /* Fuente por defecto */
+    margin: 0;
+    /* Elimina el margen por defecto */
+    padding: 0;
+    /* Elimina el padding por defecto */
+    background: url('../imagenes/progreso-img/progreso-img.jpg') no-repeat center center fixed;
+    /* Imagen de fondo fija */
+    background-size: cover;
+    /* La imagen cubre toda el área */
+    color: white;
+    /* Color del texto en blanco */
+    display: flex;
+    /* Utiliza flexbox para el layout */
+    flex-direction: column;
+    /* Los elementos se disponen en columna */
+    min-height: 100vh;
+    /* Altura mínima del viewport */
+}
+
+/* Estilos para el encabezado */
+#header-progre {
+    background-color: #252424;
+    /* Color de fondo del encabezado */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    padding: 10px;
+    /* Padding general de 10px */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos para el logo en el encabezado */
+#header-progre .logo img {
+    height: 90px;
+    /* Tamaño del logo ajustado */
+}
+
+/* Estilos para los íconos de redes sociales */
+#header-progre .social-media {
+    display: flex;
+    /* Utiliza flexbox para alinear los íconos */
+    align-items: center;
+    /* Alinea los íconos verticalmente al centro */
+}
+
+#header-progre .social-media a img {
+    height: 30px;
+    /* Tamaño ajustado para redes sociales */
+    margin: 0 20px;
+    /* Más separación entre los íconos */
+}
+
+/* Estilos para el menú de navegación */
+#header-progre nav {
+    display: flex;
+    /* Utiliza flexbox para alinear los enlaces */
+    align-items: center;
+    /* Alinea los enlaces verticalmente al centro */
+}
+
+#header-progre nav a {
+    margin: 0 25px;
+    /* Espacio horizontal entre los enlaces */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    color: white;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para el ícono de la barra lateral */
+#header-progre .sidebar-icon {
+    cursor: pointer;
+    /* Cursor tipo puntero al pasar sobre el ícono */
+    color: white;
+    /* Color del ícono en blanco */
+    margin-left: 10px;
+    /* Espacio izquierdo del ícono */
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    display: none;
+    /* Oculta la barra lateral por defecto */
+    background-color: #dad9d9;
+    /* Color de fondo de la barra lateral */
+    position: fixed;
+    /* Posición fija en la pantalla */
+    top: 0;
+    /* Posicionamiento desde el top */
+    right: 0;
+    /* Posicionamiento desde el right */
+    height: 50vh;
+    /* Altura reducida de la barra lateral */
+    width: 250px;
+    /* Ancho de la barra lateral */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /* Sombra en el borde izquierdo */
+    padding: 20px;
+    /* Padding interno de 20px */
+    overflow-y: auto;
+    /* Scroll vertical si el contenido excede la altura */
+    z-index: 1000;
+    /* Asegura que la barra lateral esté por encima de otros elementos */
+}
+
+/* Estilos para el botón de cierre de la barra lateral */
+.sidebar .close-btn {
+    font-size: 30px;
+    /* Tamaño del texto del botón */
+    cursor: pointer;
+    /* Cursor tipo puntero al pasar sobre el botón */
+    color: black;
+    /* Color del texto del botón */
+    text-align: right;
+    /* Alineación del texto a la derecha */
+}
+
+/* Estilos para la información del usuario en la barra lateral */
+.sidebar .user-info {
+    margin-bottom: 20px;
+    /* Espacio adicional debajo de la información del usuario */
+}
+
+.sidebar .user-info p {
+    color: #000000;
+    /* Color del texto en negro */
+    margin: 5px 0;
+    /* Margen vertical de 5px */
+    font-size: 1.2em;
+    /* Tamaño de fuente ajustado */
+}
+
+/* Estilos para los separadores en la barra lateral */
+.sidebar hr {
+    border: 0;
+    /* Sin borde en el separador */
+    height: 1px;
+    /* Altura del separador */
+    background-color: #000000;
+    /* Color de fondo del separador */
+    margin: 10px 0;
+    /* Espacio entre los separadores y los enlaces */
+}
+
+/* Estilos para los enlaces en la barra lateral */
+.sidebar a {
+    display: block;
+    /* Muestra los enlaces como bloques */
+    margin: 20px 0;
+    /* Más espacio entre los enlaces del sidebar */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    color: black;
+    /* Color del texto en negro */
+    font-size: 1.2em;
+    /* Tamaño de letra ajustado para los botones de acceso rápido */
+}
+
+/* Estilos para el contenedor principal del contenido */
+#main-progre {
+    padding: 20px;
+    /* Padding interno de 20px */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fondo negro semi-transparente */
+}
+
+/* Estilos para la cabecera de progreso */
+.cabeza-progre {
+    padding-top: 20px;
+    /* Padding superior de 20px */
+    padding-bottom: 20px;
+    /* Padding inferior de 20px */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fondo negro semi-transparente */
+}
+
+/* Estilos para el encabezado de progreso */
+.progress-header-progre {
+    text-align: center;
+    /* Alineación del texto al centro */
+    margin-bottom: 40px;
+    /* Margen inferior de 40px */
+    padding: 5px;
+    /* Padding interno de 5px */
+}
+
+.progress-header-progre h2 {
+    margin: 0;
+    /* Elimina el margen por defecto */
+    font-size: 2em;
+    /* Tamaño de fuente ajustado */
+}
+
+.progress-header-progre p {
+    font-size: 1.2em;
+    /* Tamaño de fuente ajustado */
+    color: #ddd;
+    /* Color del texto en gris claro */
+}
+
+/* Estilos para el resumen de progreso */
+.progress-summary-progre {
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-around;
+    /* Distribuye los elementos con espacio alrededor */
+    margin-bottom: 40px;
+    /* Margen inferior de 40px */
+}
+
+/* Estilos para las tarjetas de resumen */
+.summary-card-progre {
+    background-color: rgba(51, 49, 49, 0.9);
+    /* Fondo negro semi-transparente */
+    padding: 20px;
+    /* Padding interno de 20px */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+    text-align: center;
+    /* Alineación del texto al centro */
+    width: 100px;
+    /* Ancho de la tarjeta */
+}
+
+/* Estilos para los encabezados dentro de las tarjetas de resumen */
+.summary-card-progre h3 {
+    margin-top: 0;
+    /* Elimina el margen superior por defecto */
+    font-size: 1.2em;
+    /* Tamaño de fuente ajustado */
+    color: #fff;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para los párrafos dentro de las tarjetas de resumen */
+.summary-card-progre p {
+    font-size: 1.5em;
+    /* Tamaño de fuente ajustado */
+    color: #fff;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para el contenedor de progreso */
+.progress-container-progre {
+    padding-top: 30px;
+    /* Padding superior de 30px */
+    display: flex;
+    /* Utiliza flexbox para el layout */
+    flex-direction: column;
+    /* Los elementos se disponen en columna */
+    gap: 40px;
+    /* Espacio entre los elementos */
+    align-items: center;
+    /* Alinea los elementos horizontalmente al centro */
+}
+
+/* Estilos para las tarjetas de progreso */
+.progress-card-progre {
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fondo negro semi-transparente */
+    padding: 20px;
+    /* Padding interno de 20px */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+    width: 100%;
+    /* Ancho completo */
+    max-width: 500px;
+    /* Ancho máximo de 500px */
+}
+
+/* Estilos para los encabezados dentro de las tarjetas de progreso */
+.progress-card-progre .h3-progre {
+    margin-top: 0;
+    /* Elimina el margen superior por defecto */
+    font-size: 1.5em;
+    /* Tamaño de fuente ajustado */
+    color: #fff;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para las listas dentro de las tarjetas de progreso */
+.progress-card-progre .ul-progre {
+    list-style: none;
+    /* Sin viñetas */
+    padding: 0;
+    /* Sin padding */
+}
+
+/* Estilos para los elementos de las listas dentro de las tarjetas de progreso */
+.progress-card-progre .ul-progre .li-progre {
+    margin: 10px 0;
+    /* Margen vertical de 10px */
+    font-size: 1.2em;
+    /* Tamaño de fuente ajustado */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo blanco semi-transparente */
+    padding: 10px;
+    /* Padding interno de 10px */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+}
+
+/* Estilos para el texto dentro de los elementos de la lista */
+.progress-card-progre .ul-progre .li-progre span {
+    font-weight: bold;
+    /* Negrita para los textos dentro de span */
+}
+
+/* Estilos para el botón de iniciar meta */
+#iniciar-meta {
+    background-color: #125e03;
+    /* Color de fondo verde oscuro */
+    color: rgb(255, 255, 255);
+    /* Color del texto en blanco */
+    border: none;
+    /* Sin borde */
+    padding: 5px 10px;
+    /* Padding interno de 5px y 10px */
+    border-radius: 3px;
+    /* Bordes redondeados de 3px */
+    cursor: pointer;
+    /* Cursor tipo puntero */
+    transition: background-color 0.3s ease;
+    /* Transición suave para el color de fondo */
+}
+
+/* Estilos para el botón de iniciar meta al pasar el ratón */
+#iniciar-meta:hover {
+    background-color: #05f305;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el botón de completar meta */
+#completar-meta {
+    background-color: #04176d;
+    /* Color de fondo azul oscuro */
+    color: rgb(255, 255, 255);
+    /* Color del texto en blanco */
+    border: none;
+    /* Sin borde */
+    padding: 5px 10px;
+    /* Padding interno de 5px y 10px */
+    border-radius: 3px;
+    /* Bordes redondeados de 3px */
+    cursor: pointer;
+    /* Cursor tipo puntero */
+    transition: background-color 0.3s ease;
+    /* Transición suave para el color de fondo */
+}
+
+/* Estilos para el botón de completar meta al pasar el ratón */
+#completar-meta:hover {
+    background-color: #002fff;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el botón de cancelar meta */
+#cancelar-meta {
+    background-color: #ff4d4d;
+    /* Color de fondo rojo */
+    color: rgb(255, 255, 255);
+    /* Color del texto en blanco */
+    border: none;
+    /* Sin borde */
+    padding: 5px 10px;
+    /* Padding interno de 5px y 10px */
+    border-radius: 3px;
+    /* Bordes redondeados de 3px */
+    cursor: pointer;
+    /* Cursor tipo puntero */
+    transition: background-color 0.3s ease;
+    /* Transición suave para el color de fondo */
+}
+
+/* Estilos para el botón de cancelar meta al pasar el ratón */
+#cancelar-meta:hover {
+    background-color: #e60000;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para los estados de progreso */
+.completed {
+    color: #4CAF50;
+    /* Verde para completado */
+}
+
+.in-progress {
+    color: #FFC107;
+    /* Amarillo para en progreso */
+}
+
+.not-started {
+    color: #F44336;
+    /* Rojo para no iniciado */
+}
+
+/* Estilos para los formularios */
+#new-goal-form,
+#activity-form {
+    display: flex;
+    /* Utiliza flexbox para el layout */
+    flex-direction: column;
+    /* Los elementos se disponen en columna */
+    gap: 10px;
+    /* Espacio entre los elementos */
+    margin-bottom: 20px;
+    /* Margen inferior de 20px */
+}
+
+/* Estilos para los campos de entrada y botones en los formularios */
+#new-goal-form input,
+#activity-form input,
+#new-goal-form button,
+#activity-form button {
+    padding: 10px;
+    /* Padding interno de 10px */
+    font-size: 1em;
+    /* Tamaño de fuente ajustado */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+    border: none;
+    /* Sin borde */
+}
+
+/* Estilos para los botones en los formularios */
+#new-goal-form button,
+#activity-form button {
+    background-color: #4CAF50;
+    /* Color de fondo verde */
+    color: white;
+    /* Color del texto en blanco */
+    cursor: pointer;
+    /* Cursor tipo puntero */
+    transition: background-color 0.3s;
+    /* Transición suave para el color de fondo */
+}
+
+/* Estilos para los botones en los formularios al pasar el ratón */
+#new-goal-form button:hover,
+#activity-form button:hover {
+    background-color: #45a049;
+    /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el pie de página */
+#footer-progre {
+    background-color: #252424;
+    /* Color de fondo del pie de página */
+    color: white;
+    /* Color del texto en blanco */
+    padding: 10px;
+    /* Padding general de 10px */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos para los enlaces en el pie de página */
+#footer-progre nav.footer-nav a {
+    color: white;
+    /* Color del texto en blanco */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    margin: 0 10px;
+    /* Espacio horizontal entre los enlaces */
+}
+
+/* Estilos para la sección de contacto en el pie de página */
+#footer-progre .contacto-progre .p-progre {
+    margin: 5px 0;
+    /* Margen vertical de 5px */
+    font-size: 17px;
+    /* Tamaño de fuente ajustado */
+}

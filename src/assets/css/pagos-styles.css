@@ -1,0 +1,474 @@
+/* Estilos generales del cuerpo del documento */
+#body-pagos {
+    font-family: Arial, sans-serif;
+    /* Fuente por defecto */
+    margin: 0;
+    /* Elimina el margen por defecto */
+    padding: 0;
+    /* Elimina el padding por defecto */
+    background: url('../imagenes/pagos-img/pagos.jpg') no-repeat center center fixed;
+    /* Imagen de fondo fija */
+    background-size: cover;
+    /* La imagen cubre toda el área */
+    color: white;
+    /* Color del texto en blanco */
+    display: flex;
+    /* Utiliza flexbox para el layout */
+    flex-direction: column;
+    /* Los elementos se disponen en columna */
+    min-height: 100vh;
+    /* Altura mínima del viewport */
+}
+
+/* Estilos para el encabezado */
+#header-pagos {
+    background-color: #252424;
+    /* Color de fondo del encabezado */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    padding: 10px;
+    /* Padding general de 10px */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos para el logo en el encabezado */
+#header-pagos .logo img {
+    height: 90px;
+    /* Altura ajustada para el logo */
+}
+
+/* Estilos para los íconos de redes sociales */
+#header-pagos .social-media {
+    display: flex;
+    /* Utiliza flexbox para alinear los íconos */
+    align-items: center;
+    /* Alinea los íconos verticalmente al centro */
+}
+
+#header-pagos .social-media a img {
+    height: 30px;
+    /* Altura ajustada para los íconos de redes sociales */
+    margin: 0 20px;
+    /* Espacio horizontal entre los íconos */
+}
+
+/* Estilos para el menú de navegación */
+#header-pagos nav {
+    display: flex;
+    /* Utiliza flexbox para alinear los enlaces */
+    align-items: center;
+    /* Alinea los enlaces verticalmente al centro */
+}
+
+#header-pagos nav a {
+    margin: 0 25px;
+    /* Espacio horizontal entre los enlaces */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    color: white;
+    /* Color del texto en blanco */
+}
+
+/* Estilos para el ícono de la barra lateral */
+#header-pagos .sidebar-icon {
+    cursor: pointer;
+    /* Cursor tipo puntero al pasar sobre el ícono */
+    color: white;
+    /* Color del ícono en blanco */
+    margin-left: 10px;
+    /* Espacio izquierdo del ícono */
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    display: none;
+    /* Oculta la barra lateral por defecto */
+    background-color: #dad9d9;
+    /* Color de fondo de la barra lateral */
+    position: fixed;
+    /* Posición fija en la pantalla */
+    top: 0;
+    /* Posicionamiento desde el top */
+    right: 0;
+    /* Posicionamiento desde el right */
+    height: 50vh;
+    /* Altura de la barra lateral */
+    width: 250px;
+    /* Ancho de la barra lateral */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /* Sombra en el borde izquierdo */
+    padding: 20px;
+    /* Padding interno de 20px */
+    overflow-y: auto;
+    /* Scroll vertical si el contenido excede la altura */
+    z-index: 1000;
+    /* Asegura que la barra lateral esté por encima de otros elementos */
+}
+
+/* Estilos para el botón de cierre de la barra lateral */
+.sidebar .close-btn {
+    font-size: 30px;
+    /* Tamaño del texto del botón */
+    cursor: pointer;
+    /* Cursor tipo puntero al pasar sobre el botón */
+    color: black;
+    /* Color del texto del botón */
+    text-align: right;
+    /* Alineación del texto a la derecha */
+}
+
+/* Estilos para la información del usuario en la barra lateral */
+.sidebar .user-info {
+    margin-bottom: 20px;
+    /* Margen inferior adicional */
+}
+
+.sidebar .user-info p {
+    color: #000000;
+    /* Color del texto en negro */
+    margin: 5px 0;
+    /* Margen vertical de 5px */
+    font-size: 1.2em;
+    /* Tamaño de fuente ajustado */
+}
+
+/* Estilos para los separadores en la barra lateral */
+.sidebar hr {
+    border: 0;
+    /* Sin borde en el separador */
+    height: 1px;
+    /* Altura del separador */
+    background-color: #000000;
+    /* Color de fondo del separador */
+    margin: 10px 0;
+    /* Espacio vertical alrededor del separador */
+}
+
+/* Estilos para los enlaces en la barra lateral */
+.sidebar a {
+    display: block;
+    /* Muestra los enlaces como bloques */
+    margin: 20px 0;
+    /* Espacio vertical entre los enlaces */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    color: black;
+    /* Color del texto en negro */
+    font-size: 1.2em;
+    /* Tamaño de fuente ajustado */
+}
+
+/* Estilos para el contenedor principal del contenido */
+#main-pagos {
+    flex: 1;
+    /* Ocupa el espacio restante en el contenedor */
+    padding: 20px;
+    /* Padding interno de 20px */
+}
+
+/* Estilos para los elementos select personalizados */
+.custom-select-pagos {
+    padding: 10px;
+    /* Padding interno de 10px */
+    font-size: 16px;
+    /* Tamaño de fuente de 16px */
+    border: 2px solid #000000;
+    /* Borde negro de 2px */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+    background-color: #fff;
+    /* Fondo blanco */
+    color: #333;
+    /* Color del texto en gris oscuro */
+}
+
+/* Estilos para el hover del select personalizado */
+.custom-select-pagos:hover {
+    background-color: #f0f0f0;
+    /* Cambio de color de fondo al pasar el ratón */
+}
+
+/* Estilos para el foco del select personalizado */
+.custom-select-pagos:focus {
+    outline: none;
+    /* Sin contorno al enfocar */
+    border-color: #000000;
+    /* Borde negro al enfocar */
+}
+
+/* Estilos para las secciones de formularios */
+.form-section-pagos {
+    margin-bottom: 20px;
+    /* Margen inferior de 20px */
+}
+
+.form-section-pagos p {
+    font-size: 25px;
+    /* Tamaño de fuente de 25px */
+}
+
+/* Estilos para las opciones de pago */
+.payment-option-pagos {
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    margin-bottom: 10px;
+    /* Margen inferior de 10px */
+}
+
+.payment-option-pagos img {
+    margin-left: 10px;
+    /* Espacio izquierdo de 10px */
+    height: 20px;
+    /* Altura ajustada para las imágenes */
+}
+
+.payment-method-label-pagos {
+    margin-left: 5px;
+    /* Espacio izquierdo de 5px */
+    font-size: 18px;
+    /* Tamaño de fuente de 18px */
+    font-weight: bold;
+    /* Negrita */
+}
+
+/* Estilos para el contenedor general */
+.pag {
+    padding: 0;
+    /* Sin padding */
+    background-color: aqua;
+    /* Color de fondo aqua */
+}
+
+/* Estilos para el contenedor con dos columnas */
+.container {
+    margin-top: 20px;
+    /* Margen superior de 20px */
+    display: flex;
+    /* Utiliza flexbox para alinear los divs horizontalmente */
+    width: 100%;
+    /* Ancho completo de la página */
+}
+
+/* Estilos para las partes dentro del contenedor */
+.parte {
+    box-sizing: border-box;
+    /* Incluye el padding y el borde en el ancho */
+    padding: 20px;
+    /* Padding interno de 20px */
+}
+
+/* Estilos adicionales para visualización */
+.izquierda {
+    color: #000000;
+    /* Color del texto en negro */
+    width: 120%;
+    /* Ancho ajustado al 120% */
+    background-color: rgba(133, 133, 133, 0.907);
+    /* Fondo gris oscuro semi-transparente */
+    display: flex;
+    /* Utiliza flexbox para el layout */
+    padding: 20px;
+    /* Padding interno de 20px */
+}
+
+.derecha {
+    width: 50%;
+    /* Ancho ajustado al 50% */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fondo negro semi-transparente */
+}
+
+/* Estilos para las etiquetas */
+label {
+    font-weight: bold;
+    /* Negrita */
+    margin-bottom: 5px;
+    /* Margen inferior de 5px */
+}
+
+/* Estilos para el historial de transacciones */
+.historial-transacciones {
+    margin-bottom: 20px;
+    /* Margen inferior de 20px */
+}
+
+.historial-transacciones table {
+    width: 100%;
+    /* Ancho completo de la tabla */
+    border-collapse: collapse;
+    /* Colapsa los bordes */
+}
+
+.historial-transacciones th,
+.historial-transacciones td {
+    border: 1px solid #ddd;
+    /* Borde gris claro */
+    padding: 8px;
+    /* Padding interior de 8px */
+    text-align: left;
+    /* Alineación del texto a la izquierda */
+}
+
+.historial-transacciones th {
+    background-color: #000000;
+    /* Fondo negro para los encabezados */
+}
+
+/* Estilos para recibos y comprobantes */
+.recibos-comprobantes table {
+    width: 100%;
+    /* Ancho completo de la tabla */
+    border-collapse: collapse;
+    /* Colapsa los bordes */
+}
+
+.recibos-comprobantes th,
+.recibos-comprobantes td {
+    border: 1px solid #ddd;
+    /* Borde gris claro */
+    padding: 8px;
+    /* Padding interior de 8px */
+    text-align: left;
+    /* Alineación del texto a la izquierda */
+}
+
+.recibos-comprobantes th {
+    background-color: #000000;
+    /* Fondo negro para los encabezados */
+}
+
+.recibos-comprobantes td a {
+    color: blue;
+    /* Color de los enlaces en azul */
+    text-decoration: underline;
+    /* Subrayado en los enlaces */
+}
+
+/* Estilos para las filas de la tabla de pagos */
+#tabla-pagos tr {
+    background-color: rgba(133, 133, 133, 0.907);
+    /* Fondo gris oscuro semi-transparente para las filas */
+}
+
+/* Estilos para el pie de página */
+#footer-pagos {
+    background-color: #252424;
+    /* Color de fondo del pie de página */
+    color: white;
+    /* Color del texto en blanco */
+    padding: 10px;
+    /* Padding general de 10px */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+}
+
+/* Estilos para los enlaces en el pie de página */
+#footer-pagos nav.footer-nav a {
+    color: white;
+    /* Color del texto en blanco */
+    text-decoration: none;
+    /* Sin subrayado en los enlaces */
+    margin: 0 10px;
+    /* Espacio horizontal entre los enlaces */
+}
+
+/* Estilos para la sección de contacto en el pie de página */
+#footer-pagos .contacto-pagos .p-pagos {
+    margin: 5px 0;
+    /* Margen vertical de 5px */
+    font-size: 17px;
+    /* Tamaño de fuente de 17px */
+    text-align: center;
+    /* Alineación del texto al centro */
+}
+
+/* Estilos para los grupos de formularios */
+.form-group {
+    margin-bottom: 20px;
+    /* Margen inferior de 20px */
+}
+
+/* Estilos para la clase de tarjeta */
+.tarj {
+    font-size: 18px;
+    /* Tamaño de fuente de 18px */
+    font-weight: bold;
+    /* Negrita */
+}
+
+/* Estilos para las imágenes de pagos */
+.img-pagos {
+    padding-right: 5px;
+    /* Padding derecho de 5px */
+    width: 430px;
+    /* Ancho ajustado para las imágenes */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+}
+
+/* Estilos para las listas sin estilo */
+.ul-pagos {
+    list-style: none;
+    /* Sin viñetas */
+    padding: 0;
+    /* Sin padding */
+    margin: 0;
+    /* Sin margen */
+    text-align: left;
+    /* Alineación del texto a la izquierda */
+}
+
+/* Estilos para los encabezados dentro de las listas */
+.ul-pagos h6 {
+    margin: 0;
+    /* Sin margen */
+    padding: 3px;
+    /* Padding de 3px */
+    font-size: 16px;
+    /* Tamaño de fuente de 16px */
+}
+
+/* Estilos para los textos dentro de las listas */
+.ul-pagos .text {
+    text-align: center;
+    /* Alineación del texto al centro */
+}
+
+/* Estilos para el botón de pagos */
+.boton-pagos {
+    display: block;
+    /* Muestra el botón como bloque */
+    width: 100%;
+    /* Ancho completo */
+    padding: 10px;
+    /* Padding interno de 10px */
+    background-color: #187703;
+    /* Color de fondo verde oscuro */
+    color: #fff;
+    /* Color del texto en blanco */
+    border: none;
+    /* Sin borde */
+    border-radius: 4px;
+    /* Bordes redondeados de 4px */
+    cursor: pointer;
+    /* Cursor tipo puntero */
+}
+
+/* Estilos para el botón de pagos al pasar el ratón */
+.boton-pagos:hover {
+    background-color: #17eb04;
+    /* Cambia el color de fondo al pasar el ratón */
+}

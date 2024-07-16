@@ -1,0 +1,36 @@
+{
+    "title": "Iniciar Sesión",
+    "fields": [
+      {
+        "type": "email",
+        "label": "Correo electrónico:",
+        "model": "email",
+        "placeholder": "Correo electrónico"
+      },
+      {
+        "type": "password",
+        "label": "Contraseña:",
+        "model": "password",
+        "placeholder": "Contraseña"
+      }
+    ],
+    "passwordLink": {
+      "href": "#",
+      "text": "¿Olvidaste tu contraseña?"
+    },
+    "button": {
+      "id": "boton-login",
+      "text": "Iniciar Sesión",
+      "type": "submit"
+    },
+    "signUpLink": {
+      "text": "¿Nuevo usuario? ",
+      "href": "/registro",
+      "linkText": "Crear cuenta"
+    },
+    "returnLink": {
+      "text": "Volver al inicio",
+      "href": "/"
+    }
+  }
+  
