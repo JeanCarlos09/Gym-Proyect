@@ -1,75 +1,125 @@
 <template>
-  <!-- Contenedor principal para la página de registro -->
-  <div id="body-register">
-    <!-- Contenedor del formulario de registro -->
-    <div class="main-register">
+  <div id="body-perfil">
+    <header id="header-perfil">
+      <div class="logo">
+        <img src="@/assets/imagenes/principal-img/Imagen2.png" alt="Logo">
+      </div>
+      <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="@/assets/imagenes/principal-img/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="@/assets/imagenes/principal-img/instagran.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+          <img src="@/assets/imagenes/principal-img/x.png" alt="Twitter">
+        </a>
+      </div>
+      <nav>
+        <!-- Enlaces de navegación -->
+        <router-link to="/principal"><b>Inicio</b></router-link>
+        <router-link to="/claseslist"><b>Clases</b></router-link>
+        <router-link to="/membresia"><b>Membresía</b></router-link>
+        <router-link to="/galeria"><b>Galeria</b></router-link>
+        <router-link to="/blog"><b>Blog</b></router-link>
+        <!-- Icono para abrir el sidebar -->
+        <div class="sidebar-icon" @click="toggleSidebar"><b>☰</b></div>
+      </nav>
+    </header>
+    
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar" :class="{ 'open': sidebarOpen }">
+      <!-- Botón para cerrar el sidebar -->
+      <div class="close-btn" @click="toggleSidebar">×</div>
+      <div class="user-info">
+        <!-- Mostrar el nombre completo y correo del usuario -->
+        <p>{{ user.name }} {{ user.surname }}</p>
+        <p>{{ user.email }}</p>
+      </div>
+      <hr>
+      <router-link to="/perfil">Perfil</router-link>
+      <hr>
+      <router-link to="/inicio" @click="logout">Salir</router-link>
+    </aside>
 
-      <!-- Encabezado de la página de registro -->
-      <h1 class="h1-register">
-        <!-- Imagen del ícono de registro -->
-        <img src="@/assets/imagenes/registro-img/6.png" class="icono-register" alt="Ícono">
-        Registro de Usuario <!-- Título estático de la página de registro -->
-      </h1>
-
-      <!-- Formulario para el registro de usuario -->
-      <form @submit.prevent="handleSubmit">
-        <!-- Campo para el nombre del usuario -->
-        <div class="form-group-register">
-          <label for="name">Nombre:</label> <!-- Etiqueta para el campo del nombre -->
-          <input v-model="formData.name" id="name" name="name" autofocus placeholder="Nombre" />
-          <!-- Mensaje de error para el nombre -->
-          <span class="error-message-register">{{ errors.name }}</span>
+    <!-- Contenido principal -->
+    <div id="main-perfil">
+      <section class="content-perfil">
+        <div class="left-side">
+          <aside class="sidebar1-perfil">
+            <div class="profile-pic-perfil">
+              <img :src="user.profilePicture || 'default-profile.png'" alt="Foto de perfil" id="profileImage">
+              <button @click="triggerFileInput">Agregar Foto</button>
+              <!-- Input para cambiar la foto de perfil -->
+              <input type="file" ref="profileImageInput" style="display: none;" @change="changeProfileImage">
+            </div>
+            <ul class="menu-perifl">
+              <li @click="showSection('info-section')">Información Personal</li>
+              <li @click="showSection('phone-section')">Teléfono</li>
+              <li @click="showSection('address-section')">Dirección</li>
+            </ul>
+          </aside>
         </div>
-
-        <!-- Campo para el apellido del usuario -->
-        <div class="form-group-register">
-          <label for="surname">Apellido:</label> <!-- Etiqueta para el campo del apellido -->
-          <input v-model="formData.surname" id="surname" name="surname" placeholder="Apellido" />
-          <!-- Mensaje de error para el apellido -->
-          <span class="error-message-register">{{ errors.surname }}</span>
+        <div class="right-side">
+          <section class="content-perfil">
+            <!-- Sección de Información Personal -->
+            <div id="info-section" class="section-perfil" v-show="activeSection === 'info-section'">
+              <h2>Información Personal</h2>
+              <form id="profile-form" @submit.prevent="saveProfileInfo">
+                <div class="form-group-perfil">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" v-model="user.name" placeholder="Nombre">
+                  <span class="error-message"></span>
+                </div>
+                <div class="form-group-perfil">
+                  <label for="apellido">Apellido:</label>
+                  <input type="text" id="apellido" v-model="user.surname" placeholder="Apellido">
+                  <span class="error-message"></span>
+                </div>
+                <button type="submit">Guardar Cambios</button>
+              </form>
+            </div>
+            <!-- Sección de Teléfono -->
+            <div id="phone-section" class="section" v-show="activeSection === 'phone-section'">
+              <h2>Teléfono</h2>
+              <form id="phone-form" @submit.prevent="savePhone">
+                <div class="form-group-perfil">
+                  <label for="telefono">Teléfono:</label>
+                  <input type="tel" id="telefono" v-model="user.phone" placeholder="Teléfono">
+                  <span class="error-message"></span>
+                </div>
+                <button type="submit">Guardar Cambios</button>
+              </form>
+            </div>
+            <!-- Sección de Dirección -->
+            <div id="address-section" class="section" v-show="activeSection === 'address-section'">
+              <h2>Dirección</h2>
+              <form id="address-form" @submit.prevent="saveAddress">
+                <div class="form-group">
+                  <label for="direccion">Dirección:</label>
+                  <input type="text" id="direccion" v-model="user.address" placeholder="Dirección">
+                  <span class="error-message"></span>
+                </div>
+                <button id="boton-perfil" type="submit">Guardar Cambios</button>
+              </form>
+            </div>
+          </section>
         </div>
-
-        <!-- Campo para el correo electrónico del usuario -->
-        <div class="form-group-register">
-          <label for="email">Correo electrónico:</label> <!-- Etiqueta para el campo del correo electrónico -->
-          <input v-model="formData.email" id="email" name="email" placeholder="Correo electrónico" />
-          <!-- Mensaje de error para el correo electrónico -->
-          <span class="error-message-register">{{ errors.email }}</span>
-        </div>
-
-        <!-- Campo para la contraseña del usuario -->
-        <div class="form-group-register">
-          <label for="password">Contraseña:</label> <!-- Etiqueta para el campo de la contraseña -->
-          <input v-model="formData.password" type="password" id="password" name="password" placeholder="Contraseña" />
-          <!-- Mensaje de error para la contraseña -->
-          <span class="error-message-register">{{ errors.password }}</span>
-        </div>
-
-        <!-- Campo para la confirmación de la contraseña del usuario -->
-        <div class="form-group-register">
-          <label for="confirm-password">Confirmar Contraseña:</label>
-          <!-- Etiqueta para el campo de confirmación de contraseña -->
-          <input v-model="formData.confirmPassword" type="password" id="confirm-password" name="confirm-password"
-            placeholder="Confirmar Contraseña" />
-          <!-- Mensaje de error para la confirmación de contraseña -->
-          <span class="error-message-register">{{ errors.confirmPassword }}</span>
-        </div>
-
-        <!-- Botón para enviar el formulario -->
-        <button id="boton-register" type="submit">Registrarse</button>
-
-        <!-- Enlace para redirigir a la página de inicio de sesión -->
-        <div class="signup-link-register">
-          Ya tienes cuenta
-          <router-link to="/inicio">Iniciar Sesión</router-link>
-        </div>
-
-        <!-- Enlace para volver a la página de inicio -->
-        <div class="signup-link-login">
-          <a href="/">Volver al inicio</a>
-        </div>
-      </form>
+      </section>
     </div>
+    
+    <footer>
+      <nav class="footer-nav">
+        <a href="#terminos">Términos y Condiciones</a>
+        <a href="#privacidad">Política de Privacidad</a>
+      </nav>
+      <div class="contacto">
+        <p>Gimnasio Universitario</p>
+        <p>Dirección: Calle Falsa 123</p>
+        <p>Teléfono: 555-1234</p>
+        <p>Email: info@gimnasio.com</p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -77,106 +127,109 @@
 export default {
   data() {
     return {
-      formData: {
-        name: '', // Nombre del usuario
-        surname: '', // Apellido del usuario
-        email: '', // Correo electrónico del usuario
-        password: '', // Contraseña del usuario
-        confirmPassword: '' // Confirmación de la contraseña del usuario
-      },
-      errors: {
-        name: '', // Mensaje de error para el nombre
-        surname: '', // Mensaje de error para el apellido
-        email: '', // Mensaje de error para el correo electrónico
-        password: '', // Mensaje de error para la contraseña
-        confirmPassword: '' // Mensaje de error para la confirmación de contraseña
-      }
-    };
-  },
-  methods: {
-    validateForm() {
-      let valid = true;
-      this.errors = {
+      // Datos del usuario inicializados
+      user: {
         name: '',
         surname: '',
         email: '',
-        password: '',
-        confirmPassword: ''
-      };
-
-      // Validar nombre
-      if (!this.formData.name) {
-        this.errors.name = 'El nombre es obligatorio.';
-        valid = false;
-      } else if (!/^[a-zA-Z\s]+$/.test(this.formData.name)) {
-        this.errors.name = 'El nombre solo puede contener letras.';
-        valid = false;
-      }
-
-      // Validar apellido
-      if (!this.formData.surname) {
-        this.errors.surname = 'El apellido es obligatorio.';
-        valid = false;
-      } else if (!/^[a-zA-Z\s]+$/.test(this.formData.surname)) {
-        this.errors.surname = 'El apellido solo puede contener letras.';
-        valid = false;
-      }
-
-      // Validar correo electrónico
-      if (!this.formData.email) {
-        this.errors.email = 'El correo electrónico es obligatorio.';
-        valid = false;
-      } else if (!this.validateEmail(this.formData.email)) {
-        this.errors.email = 'El formato del correo electrónico es inválido.';
-        valid = false;
-      }
-
-      // Validar contraseña
-      if (!this.formData.password) {
-        this.errors.password = 'La contraseña es obligatoria.';
-        valid = false;
-      } else if (this.formData.password.length > 12) {
-        this.errors.password = 'La contraseña no puede tener más de 12 caracteres.';
-        valid = false;
-      }
-
-      // Validar confirmación de contraseña
-      if (this.formData.password !== this.formData.confirmPassword) {
-        this.errors.confirmPassword = 'Las contraseñas no coinciden.';
-        valid = false;
-      }
-
-      return valid; // Devuelve si el formulario es válido
+        phone: '',
+        address: '',
+        profilePicture: '' // Agregamos la foto de perfil
+      },
+      activeSection: 'info-section', // Sección activa del perfil
+      sidebarOpen: false // Controla si el sidebar está abierto o cerrado
+    };
+  },
+  mounted() {
+    // Cargar los datos del usuario cuando el componente se monta
+    this.loadUser();
+  },
+  methods: {
+    // Cambiar la sección activa
+    showSection(section) {
+      this.activeSection = section;
     },
-    validateEmail(email) {
-      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar el formato del email
-      return re.test(email); // Verifica si el correo electrónico cumple con la expresión regular
+    // Alternar el estado del sidebar
+    toggleSidebar() {
+      this.sidebarOpen = !this.sidebarOpen;
     },
-    handleSubmit() {
-      if (this.validateForm()) { // Valida el formulario antes de enviar
-        const users = JSON.parse(localStorage.getItem('users')) || []; // Obtiene los usuarios almacenados o inicializa un array vacío
-        const existingUser = users.find(u => u.email === this.formData.email); // Verifica si ya existe un usuario con el mismo correo electrónico
-
-        if (existingUser) {
-          this.errors.email = 'Ya existe una cuenta con este correo electrónico.'; // Mensaje de error si el correo electrónico ya está en uso
-        } else {
-          // Añade el nuevo usuario a la lista
-          users.push({
-            name: this.formData.name,
-            surname: this.formData.surname,
-            email: this.formData.email,
-            password: this.formData.password
-          });
-          localStorage.setItem('users', JSON.stringify(users)); // Guarda la lista de usuarios en el localStorage
-          this.$router.push('/inicio'); // Redirige a la página de inicio de sesión
+    // Disparar el input de archivo para cambiar la foto de perfil
+    triggerFileInput() {
+      this.$refs.profileImageInput.click();
+    },
+    // Cambiar la imagen de perfil
+    changeProfileImage(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          this.user.profilePicture = e.target.result; // Actualizamos la foto de perfil
+          this.saveProfileInfo(); // Guardamos la foto en localStorage
+        };
+        reader.readAsDataURL(file);
+      }
+    },
+    // Cargar datos del usuario desde localStorage
+    loadUser() {
+      const loggedInUserEmail = localStorage.getItem('loggedInUser');
+      if (loggedInUserEmail) {
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const user = users.find(u => u.email === loggedInUserEmail);
+        if (user) {
+          this.user = { ...user };
         }
       }
+    },
+    // Guardar la información del perfil en localStorage
+    saveProfileInfo() {
+      const loggedInUserEmail = localStorage.getItem('loggedInUser');
+      if (loggedInUserEmail) {
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const userIndex = users.findIndex(u => u.email === loggedInUserEmail);
+        if (userIndex !== -1) {
+          users[userIndex] = { ...users[userIndex], ...this.user };
+          localStorage.setItem('users', JSON.stringify(users));
+          alert('Información personal guardada');
+        }
+      }
+    },
+    // Función para guardar el teléfono
+    savePhone() {
+      this.saveProfileInfo(); // Guardamos el teléfono junto con otros datos
+      alert('Teléfono guardado');
+    },
+    // Función para guardar la dirección
+    saveAddress() {
+      this.saveProfileInfo(); // Guardamos la dirección junto con otros datos
+      alert('Dirección guardada');
+    },
+    // Cerrar sesión y redirigir a la página de inicio
+    logout() {
+      localStorage.removeItem('loggedInUser');
+      this.$router.push('/inicio');
     }
   }
 };
 </script>
 
-<style>
-@import '@/assets/css/registro-styles.css';
-/* Importa los estilos específicos para la página de registro */
+<style scoped>
+@import '@/assets/css/perfil-styles.css';
+
+/* Estilos para mostrar y ocultar la barra lateral */
+.sidebar {
+  display: none; /* Oculto por defecto */
+  transition: transform 0.3s ease;
+}
+
+.sidebar.open {
+  display: block; /* Mostrar cuando la clase 'open' está presente */
+  transform: translateX(0);
+}
+
+/* Estilo para la imagen de perfil */
+.profile-pic-perfil img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+}
 </style>
